@@ -1,0 +1,10 @@
+.header__mobile-label {
+  display: none;
+  justify-content: flex-end;
+}
+
+@media (max-width: 425px) {
+  .header__mobile-label {
+    display: flex;
+  }
+}
