@@ -16,5 +16,10 @@
   font-size: 18px;
   line-height: 1.22;
   
-  color: #000000;
+  color: #000000;   
 }
+
+.form__input::-webkit-input-placeholder {color:#000000;}
+.form__input::-moz-placeholder          {color:#000000;}
+.form__input::-ms-input-placeholder     {color:#000000;}
+.form__input::placeholder               {color:#000000;}

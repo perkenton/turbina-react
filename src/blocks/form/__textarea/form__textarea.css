@@ -18,3 +18,8 @@
   
   color: #000000;
 }
+
+.form__textarea::-webkit-input-placeholder {color:#000000;}
+.form__textarea::-moz-placeholder          {color:#000000;}
+.form__textarea::-ms-input-placeholder     {color:#000000;}
+.form__textarea::placeholder               {color:#000000;}
