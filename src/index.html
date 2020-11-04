@@ -97,8 +97,11 @@
         <input type="email" class="form__input" placeholder="Почта">
         <input type="tel" class="form__input" placeholder="Телефон">
         <textarea name="" id="" cols="30" rows="10" class="form__textarea" placeholder="Стихи"></textarea>
-        <input type="checkbox" id="offer" class="form__input-radio">
-        <label for="offer" class="form__input-label">Согласен с <a href="#" class="form__link">офертой</a></label>
+        <label for="offer" class="form__input-label">
+          <input type="checkbox" id="offer" class="form__input-radio">
+          <span class="form__input-radio_visible"></span>        
+          Согласен с <a href="#" class="form__link">офертой</a>  
+        </label>
         <button type="submit" class="form__input-submit">Отправить</button>
       </form>
     </section>

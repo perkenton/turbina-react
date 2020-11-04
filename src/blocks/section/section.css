@@ -9,4 +9,11 @@
   align-items: flex-start;     
 
   width: 100%;
+
+  padding: 58px 0 0;
+  box-sizing: border-box;
+}
+
+.section:last-of-type {
+  padding: 120px 0 0;
 }
