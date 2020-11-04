@@ -1,0 +1,16 @@
+.section__paragraph {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+  
+  color: #000000;
+
+  margin: 22px 0 0;
+
+  max-width: 716px;
+}
+
+.section__paragraph:first-of-type {
+  margin: 40px 0 0;
+}
