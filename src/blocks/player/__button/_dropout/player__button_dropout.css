@@ -1,0 +1,7 @@
+.player__button_dropout {
+  justify-self: flex-end;
+  height: 24px;
+  width: 30px;
+  margin: 0 0 0 0;
+  background-image: url('../../../../images/player/close-button.svg');
+}

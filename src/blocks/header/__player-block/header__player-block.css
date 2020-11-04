@@ -1,3 +1,5 @@
 .header__player-block {
-
+  margin: 0 auto 20px auto;
+  max-width: 1233px;
+  width: calc(100% - 44px);
 }
