@@ -1,0 +1,21 @@
+.player__content-title {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .player__content-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 320px) {
+  .player__content-title {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
