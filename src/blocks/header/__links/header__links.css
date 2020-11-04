@@ -8,14 +8,13 @@
 
 @media (max-width: 425px) {
   .header__links {
-    visibility: hidden;
-    opacity: 0;
-    transition: .4s ease-in;
+    transform: scaleY(0);
+    transform-origin: 100% 0;
+    transition: .3s linear;
   }
 
   .header__mobile-checkbox:checked ~ .header__mobile-label ~ .header__links {
     margin-top: 12px;
-    visibility: visible;
-    opacity: 1;
+    transform: scaleY(1);
   }
 }
