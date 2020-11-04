@@ -1,0 +1,23 @@
+.header__logo-title {
+  max-width: 720px;
+  width: calc(100% - 44px);
+}
+
+@media (max-width: 1024px) {
+  .header__logo-title {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__logo-title {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header__logo-title {
+    width: calc(100% - 48px);
+    margin-top: -123px;
+  }
+}
