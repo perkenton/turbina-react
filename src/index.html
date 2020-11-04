@@ -36,7 +36,36 @@
     <img src="<%=require('./images/turbina-logo.svg').default%>" alt="Логотип Турбины" class="header__title">
     <h1 class="visually-hidden">Турбина</h1>
 
-    <div class="header__player-block"></div>
+    <div class="header__player-block player">
+      <div class="player__container">
+        <button class="player__button player__button_play"></button>
+        <div class="player__song-container">
+          <div class="player__current-song">
+            <p class="player__song-title">Контур — Хадн Дадн feat. Варя Карпова и Федя Быстров</p>
+            <p class="player__song-duration">2:24</p>
+          </div>
+          <div class="player__progress progress-bar">
+            <div class="progress-bar__bg"></div>
+            <div class="progress-bar__bg progress-bar__progreess"></div>
+          </div>
+        </div>
+        <button class="player__button player__button_toggle">Релизы</button>
+        <button class="player__button player__button_dropout"></button>
+      </div>
+      <div class="player__playlist-container">
+        <h2 class="player__releases">Релизы:</h2>
+        <ul class="player__playlist">
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+        </ul>
+      </div>
+    </div>
   </header>
 
   <main class="main">
