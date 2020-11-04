@@ -15,5 +15,17 @@
   background-image: url('../../images/backgroung-image-1.png');
   background-repeat: no-repeat;
   background-position: center;
+<<<<<<< HEAD
   background-size: cover; 
+=======
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (max-width: 425px) {
+  .root {
+    background-position: right;
+    background-size: inherit;
+  }
+>>>>>>> develop
 }
