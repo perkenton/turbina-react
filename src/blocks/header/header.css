@@ -15,21 +15,9 @@
 .header {
   width: 100%;
   min-height: 100vh;
-  background-image: url('../../images/backgroung-image-1.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   transition: .6s linear;
-}
-
-@media (max-width: 425px) {
-  .header {
-    background-position: right;
-    background-size: inherit;
-  }
 }
