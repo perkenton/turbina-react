@@ -20,8 +20,8 @@
 
         <input type="checkbox" id="checkbox" class="header__mobile-checkbox">
         <label for="checkbox" class="header__mobile-label">
-          <p class="header__mobile-submenu">Стриминги</p>
-          <p class="header__mobile-cross">&times;</p>
+          <span class="header__mobile-submenu">Стриминги</span>
+          <span class="header__mobile-cross">&times;</span>
         </label>
 
         <ul class="header__links">
@@ -33,10 +33,11 @@
       </div>
     </div>
 
-    <img src="<%=require('./images/turbina-logo.svg').default%>" alt="Логотип Турбины" class="header__title">
-    <h1 class="visually-hidden">Турбина</h1>
+    <h1 class="header__title">
+      <img src="<%=require('./images/turbina-logo.svg').default%>" alt="Логотип Турбины" class="header__logo-title">
+    </h1>
 
-    <div class="header__player-block"></div>
+    <div class="header__player-block" style="height: 40px;"></div>
   </header>
 
   <main class="main">
