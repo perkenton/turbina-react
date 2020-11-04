@@ -1,0 +1,13 @@
+.player__button {
+  width: 20px;
+  height: 24px;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  outline: none;
+  background: none no-repeat;
+  background-position: center;
+  border: none;
+  padding: 0;
+}
