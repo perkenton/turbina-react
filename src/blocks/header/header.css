@@ -15,10 +15,10 @@
 .header {
   width: 100%;
   min-height: 100vh;
-  background-image: url('../../images/backgroung-image-1.png');
+  /* background-image: url('../../images/backgroung-image-1.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
