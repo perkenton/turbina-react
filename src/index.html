@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Turbina project</title>
+  <title>Турбина</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
   <link rel="icon" href="<%=require('./images/favicon.ico').default%>">
   <script defer src="<%=htmlWebpackPlugin.files.js %>"></script>
@@ -14,16 +14,31 @@
 <div class="root" id="root">
   <header class="header">
     <div class="header__top-wrapper">
-      <img src="" alt="" class="header__logo">
+      <a href="https://marshakbooks.ru" target="_blank" class="header__logo-link"><img src="<%=require('./images/logo.svg').default%>" alt="Логотип магазина Маршак" class="header__logo"></a>
       <div class="header__links-block">
+
+
+        <input type="checkbox" id="checkbox" class="header__mobile-checkbox">
+        <label for="checkbox" class="header__mobile-label">
+          <p class="header__mobile-submenu">Стриминги</p>
+          <p class="header__mobile-cross">&times;</p>
+        </label>
+
         <ul class="header__links">
-          <li class="header__link-item"><a href="" class="header__link"></a></li>
+          <li class="header__link-item"><a href="https://music.yandex.ru" target="_blank" class="header__link">Яндекс.Музыка ↗</a></li>
+          <li class="header__link-item"><a href="https://www.spotify.com" target="_blank" class="header__link">Spotify ↗</a></li>
+          <li class="header__link-item"><a href="https://music.apple.com" target="_blank" class="header__link">Apple Music ↗</a></li>
+          <li class="header__link-item"><a href="https://vk.com/vkmusic" target="_blank" class="header__link">VK Music ↗</a></li>
         </ul>
       </div>
     </div>
-    <h1 class="header__title"></h1>
+
+    <img src="<%=require('./images/turbina-logo.svg').default%>" alt="Логотип Турбины" class="header__title">
+    <h1 class="visually-hidden">Турбина</h1>
+
     <div class="header__player-block"></div>
   </header>
+
   <main class="main">
     <section class="section about">
       <h2 class="section__title">О проекте</h2>
@@ -59,6 +74,7 @@
   <footer class="footer">
     <p class="footer__copyright"></p>
   </footer>
+
 </div>
 
 </body>
