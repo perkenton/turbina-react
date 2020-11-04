@@ -64,12 +64,13 @@
     <section class="section add-author">
       <h2 class="section__title">Форма</h2>
       <form action="" class="form">
-        <input type="text" class="form__input">
-        <input type="email" class="form__input">
-        <input type="tel" class="form__input">
-        <textarea name="" id="" cols="30" rows="10" class="form__textarea"></textarea>
-        <input type="radio" class="form__input-radio"> Согласен с <a href="#" class="form__link">офертой</a>
-        <input type="submit" value="Отправить" class="form__input-submit">
+        <input type="text" class="form__input" placeholder="Имя и фамилия автора">
+        <input type="email" class="form__input" placeholder="Почта">
+        <input type="tel" class="form__input" placeholder="Телефон">
+        <textarea name="" id="" cols="30" rows="10" class="form__textarea" placeholder="Стихи"></textarea>
+        <input type="checkbox" id="offer" class="form__input-radio">
+        <label for="offer" class="form__input-label">Согласен с <a href="#" class="form__link">офертой</a></label>
+        <button type="submit" class="form__input-submit">Отправить</button>
       </form>
     </section>
   </main>
