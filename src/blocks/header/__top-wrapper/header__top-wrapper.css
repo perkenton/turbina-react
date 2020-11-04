@@ -1,3 +1,17 @@
 .header__top-wrapper {
+  max-width: 1233px;
+  width: calc(100% - 44px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+@media (max-width: 425px) {
+  .header__top-wrapper {
+    width: calc(100% - 24px);
+    padding-top: 12px;
+  }
 }

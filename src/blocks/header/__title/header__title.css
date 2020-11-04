@@ -1,3 +1,11 @@
 .header__title {
+  max-width: 861px;
+  width: calc(100% - 44px);
+}
 
+@media (max-width: 425px) {
+  .header__title {
+    width: calc(100% - 24px);
+    margin-top: -123px;
+  }
 }

@@ -1,0 +1,13 @@
+.visually-hidden {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,13 @@
+.header__logo-link {
+  text-decoration: none;
+  transition: .3s linear;
+}
+
+.header__logo-link:hover {
+  transform: scale(1.1);
+}
+
+.header__logo-link:focus {
+  outline: 1px dotted #fff;
+}
+
