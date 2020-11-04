@@ -1,0 +1,12 @@
+.form__input-radio_visible {
+  display: inline-block; 
+  vertical-align: middle; 
+  width: 27px;
+  height: 27px; 
+  
+  margin-right: 10px;
+
+  background-image: url('../../../../images/offer.svg');
+  background-size: cover;
+  transition: background-image 0.5s ease;
+}
