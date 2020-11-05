@@ -9,3 +9,10 @@
   flex-direction: column;
   overflow: auto;
 }
+
+@media (max-width: 500px) {
+  .player__song-container {
+    margin: 0;
+    width: 100%;
+  }
+}
