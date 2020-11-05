@@ -30,19 +30,11 @@
   .header__link {
     font-size: 15px;
     line-height: 18px;
-    padding: 5px 17px;
+    padding: 6px 16px;
   }
 
   .header__link:active {
     font-size: 14px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .header__link {
-    font-size: 15px;
-    line-height: 18px;
-    padding: 6px 16px;
   }
 }
 
