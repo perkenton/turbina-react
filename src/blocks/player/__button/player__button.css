@@ -1,13 +1,17 @@
 .player__button {
-  width: 20px;
-  height: 24px;
-  font-style: italic;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
+  min-width: 18px;
+  height: 15px;
   outline: none;
   background: none no-repeat;
   background-position: center;
+  background-size: contain;
   border: none;
   padding: 0;
+}
+
+@media (max-width: 320px) {
+  .player__button {
+    min-width: 16px;
+    height: 13px;
+  }
 }
