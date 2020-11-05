@@ -17,7 +17,25 @@
 }
 
 .header__link:focus {
-  outline: 1px dotted #fff;
+  outline: none;
+  background-color: rgba(255, 255, 255, .4);
+}
+
+.header__link:active {
+  background-color: rgba(255, 255, 255, .7);
+  font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+  .header__link {
+    font-size: 15px;
+    line-height: 18px;
+    padding: 5px 17px;
+  }
+
+  .header__link:active {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -33,5 +51,8 @@
     font-size: 12px;
     line-height: 15px;
     padding: 5px 14px;
+  }
+  .header__link:active {
+    font-size: 11px;
   }
 }

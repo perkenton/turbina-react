@@ -1,0 +1,10 @@
+.player__button_toggle {
+  font-weight: 400;
+  color: white;
+  width: 135px;
+  height: 35px;
+  border: 2px solid #FFFFFF;
+  margin: 0 20px;
+  box-sizing: border-box;
+  border-radius: 30px;
+}

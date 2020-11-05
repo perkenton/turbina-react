@@ -1,22 +1,63 @@
 .form__input-submit {
-  font-family: inherit;
-  text-align: center;
-  
-  max-width: 597px;
+  max-width: 600px;
   width: 100%;
-  height: 60px;
+  min-height: 60px;
 
   border-radius: 30px;
-  border-width: 2px;
+  border: 2px solid #000;
 
-  margin: 58px 0;
+  margin: 39px 0 0;
 
-  background-color: #ffffff;
+  background-color: #fff;
 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #000;
+
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+.form__input-submit:hover {
   font-size: 18px;
-  line-height: 1.22;
-  
-  color: #000000;
+}
+
+.form__input-submit:focus {
+  outline: none;
+  font-size: 18px;
+}
+
+.form__input-submit:active {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .form__input-submit {
+    max-width: 648px;
+  }
+}
+
+@media (max-width: 425px) {
+  .form__input-submit {
+    min-height: 42px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .form__input-submit:hover {
+    font-size: 14px;
+  }
+
+  .form__input-submit:focus {
+    outline: none;
+    font-size: 14px;
+  }
+
+  .form__input-submit:active {
+    font-size: 12px;
+  }
 }

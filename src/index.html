@@ -37,47 +37,83 @@
       <img src="<%=require('./images/turbina-logo.svg').default%>" alt="Логотип Турбины" class="header__logo-title">
     </h1>
 
-    <div class="header__player-block"></div>
+    <div class="header__player-block player">
+      <div class="player__container">
+        <button class="player__button player__button_play"></button>
+        <div class="player__song-container">
+          <div class="player__current-song">
+            <p class="player__song-title">Контур — Хадн Дадн feat. Варя Карпова и Федя Быстров</p>
+            <p class="player__song-duration">2:24</p>
+          </div>
+          <div class="player__progress progress-bar">
+            <div class="progress-bar__bg"></div>
+            <div class="progress-bar__bg progress-bar__progreess"></div>
+          </div>
+        </div>
+        <button class="player__button player__button_toggle">Релизы</button>
+        <button class="player__button player__button_dropout"></button>
+      </div>
+      <div class="player__playlist-container">
+        <h2 class="player__releases">Релизы:</h2>
+        <ul class="player__playlist">
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+          <li class="player__song">Лодка — СБПЧ feat. Маруся Романова</li>
+        </ul>
+      </div>
+    </div>
   </header>
 
   <main class="main">
     <section class="section about">
       <h2 class="section__title">О проекте</h2>
-      <p class="section__paragraph">Мы знаем, что наши дети постоянно существуют в режиме непрекращающегося творческого процесса. Мы видим это, когда ребёнок что-то напевает, когда он бесконечно рисует, когда придумывает истории, когда разговаривает с едой и игрушками — дети постоянно включены и что-то изобретают. Родители часто недооценивают это спонтанное творчество ребёнка. Это не плохо, просто мы привыкаем к этому. Давайте попробуем внимательнее присмотреться к нашим детям.</p>
-      <p class="section__paragraph">Мы запускаем проект «ТУРБИНА», который открывает работу настоящего музыкального лейбла на базе «Маршака». В рамках «ТУРБИНЫ» лучшие современные инди-музыканты пишут свои песни на стихи, написанные детьми. Здесь важно — мы не заставляем наших детей садиться и писать поэзию, мы говорим о том, что родителям стоит быть более внимательными и чуткими к своим детям. Именно так мы сможем получить тексты, которые перестанут быть детскими, не будут осмыслены как взрослые — поэзия, которая сокращает дистанцию между взрослостью и детством, где спонтанное детское творчество и бессознательное, замеченное родителем, становится общественным культурным достоянием.</p>
+      <p class="section__paragraph">Мы&nbsp;знаем, что наши дети постоянно существуют в&nbsp;режиме непрекращающегося творческого процесса. Мы&nbsp;видим это, когда ребёнок что-то напевает, когда он&nbsp;бесконечно рисует, когда придумывает истории, когда разговаривает с&nbsp;едой и&nbsp;игрушками&nbsp;&mdash; дети постоянно включены и&nbsp;что-то изобретают. Родители часто недооценивают это спонтанное творчество ребёнка. Это не&nbsp;плохо, просто мы&nbsp;привыкаем к&nbsp;этому. Давайте попробуем внимательнее присмотреться к&nbsp;нашим детям.</p>
+      <p class="section__paragraph">Мы&nbsp;запускаем проект &laquo;ТУРБИНА&raquo;, который открывает работу настоящего музыкального лейбла на&nbsp;базе &laquo;Маршака&raquo;. В&nbsp;рамках &laquo;ТУРБИНЫ&raquo; лучшие современные инди-музыканты пишут свои песни на&nbsp;стихи, написанные детьми. Здесь важно&nbsp;&mdash; мы&nbsp;не&nbsp;заставляем наших детей садиться и&nbsp;писать поэзию, мы&nbsp;говорим о&nbsp;том, что родителям стоит быть более внимательными и&nbsp;чуткими к&nbsp;своим детям. Именно так мы&nbsp;сможем получить тексты, которые перестанут быть детскими, не&nbsp;будут осмыслены как взрослые&nbsp;&mdash; поэзия, которая сокращает дистанцию между взрослостью и&nbsp;детством, где спонтанное детское творчество и&nbsp;бессознательное, замеченное родителем, становится общественным культурным достоянием.</p>
     </section>
 
     <section class="section how-it-works">  
         <h2 class="section__title">Как это работает</h2>
-        <p class="section__paragraph">Вы можете прислать нам тексты, родившиеся у ваших детей, которые вы записали и считаете, что это сильное высказывание. Мы собираем пул таких текстов и передаём их музыкантам. Артисты создают музыку на эти стихи. Мы продюсируем выпуск трека, возможно съёмки клипа и так далее. Мы всегда указываем автора стихотворений внутри релиза: Хадн Дадн feat. Варя Карпова и Федя Быстров — Контур.</p>
+        <p class="section__paragraph">Вы&nbsp;можете прислать нам тексты, родившиеся у&nbsp;ваших детей, которые вы&nbsp;записали и&nbsp;считаете, что это сильное высказывание. Мы&nbsp;собираем пул таких текстов и&nbsp;передаём их&nbsp;музыкантам. Артисты создают музыку на&nbsp;эти стихи. Мы&nbsp;продюсируем выпуск трека, возможно съёмки клипа и&nbsp;так далее. Мы&nbsp;всегда указываем автора стихотворений внутри релиза: Хадн Дадн feat. Варя Карпова и&nbsp;Федя Быстров&nbsp;&mdash; Контур.</p>
     </section>
 
     <section class="section points">      
       <h2 class="section__title">Тезисы</h2>
       <ul class="section__list">
-        <li class="section__list-item">&mdash; Дети никогда не прекращают творить и круто стараться быть на них похожими в этом</li>
-        <li class="section__list-item">&mdash; Детское бессознательное помогает родителям понять, что происходит внутри семьи</li>
-        <li class="section__list-item">&mdash; Не существует детской и взрослой поэзии. Существует мысль и чувство, зафиксированное в ней</li>
-        <li class="section__list-item">&mdash; Дети получают невероятное удовольствие и мотивацию от того, что их творчество востребовано сверстниками и взрослыми.</li>
+        <li class="section__list-item">Дети никогда не&nbsp;прекращают творить и&nbsp;круто стараться быть на&nbsp;них похожими в&nbsp;этом.</li>
+        <li class="section__list-item">Детское бессознательное помогает родителям понять, что происходит внутри семьи.</li>
+        <li class="section__list-item">Не&nbsp;существует детской и&nbsp;взрослой поэзии. Существует мысль и&nbsp;чувство, зафиксированное в&nbsp;ней.</li>
+        <li class="section__list-item">Дети получают невероятное удовольствие и&nbsp;мотивацию от&nbsp;того, что их&nbsp;творчество востребовано сверстниками и&nbsp;взрослыми.</li>
       </ul>
     </section>
 
     <section class="section add-author">
       <h2 class="section__title">Форма</h2>
+      <p class="section__paragraph">Заполняя эту форму, вы&nbsp;становитесь частью проекта.</p>
+
       <form action="" class="form">
         <input type="text" class="form__input" placeholder="Имя и фамилия автора">
-        <input type="email" class="form__input" placeholder="Почта">
+        <span class="form__error">Какая-то ошибка*</span>
         <input type="tel" class="form__input" placeholder="Телефон">
-        <textarea name="" id="" cols="30" rows="10" class="form__textarea" placeholder="Стихи"></textarea>
-        <input type="checkbox" id="offer" class="form__input-radio">
-        <label for="offer" class="form__input-label">Согласен с <a href="#" class="form__link">офертой</a></label>
-        <button type="submit" class="form__input-submit">Отправить</button>
+        <input type="email" class="form__input" placeholder="Почта">
+        <textarea name="" id="" class="form__textarea" placeholder="Стихи"></textarea>
+        <label for="offer" class="form__input-label">
+          <input type="checkbox" id="offer" class="form__input-radio">
+          <span class="form__input-radio_visible"></span>
+          Согласен с <a href="#" class="form__link">офертой</a>
+        </label>
+        <button type="submit" class="form__input-submit">Отправить форму</button>
       </form>
     </section>
   </main>
 
   <footer class="footer">
-    <p class="footer__copyright"></p>
+    <p class="footer__copyright">&copy;&nbsp;Маршак, 2020.</p>
+    <p class="footer__copyright">Сделано студентами <a href="https://praktikum.yandex.ru" target="_blank" class="footer__link">Яндекс.Практикум</a></p>
   </footer>
 
 </div>

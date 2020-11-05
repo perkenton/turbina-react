@@ -1,0 +1,8 @@
+.player__song-container {
+  max-width: 100%;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  
+}
