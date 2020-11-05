@@ -1,29 +1,43 @@
 .form__input {
-  max-width: 597px;
+  max-width: 600px;
   width: 100%;
-  height: 60px;
+  min-height: 60px;
 
-  border-radius: 30px;
-  border-width: 2px;
+  border: none;
+  border-bottom: 2px solid #000;
 
-  margin: 18px 0 0;
+  margin: 10px 0 0;
 
   box-sizing: border-box;
-  padding: 18px 27px;
 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 1.22;
+  font-size: 16px;
+  line-height: 20px;
   
-  color: #000000;   
+  color: #000;
+}
+
+.form__input:focus {
+  outline: none;
 }
 
 .form__input:first-of-type {
   margin: 0;
 }
 
-.form__input::-webkit-input-placeholder {color:#000000;}
-.form__input::-moz-placeholder          {color:#000000;}
-.form__input::-ms-input-placeholder     {color:#000000;}
-.form__input::placeholder               {color:#000000;}
+.form__input::-webkit-input-placeholder { color: rgba(0, 0, 0, .4); }
+.form__input::-moz-placeholder          { color: rgba(0, 0, 0, .4); }
+.form__input::-ms-input-placeholder     { color: rgba(0, 0, 0, .4); }
+.form__input::placeholder               { color: rgba(0, 0, 0, .4); }
+
+.form__input::-webkit-input-placeholder { opacity: 1; transition: opacity 0.3s linear; }
+.form__input::-moz-placeholder { opacity: 1; transition: opacity 0.3s linear; }
+.form__input:-moz-placeholder { opacity: 1; transition: opacity 0.3s linear; }
+.form__input:-ms-input-placeholder { opacity: 1; transition: opacity 0.3s linear; }
+
+.form__input:focus::-webkit-input-placeholder { opacity: 0; transition: opacity 0.3s linear; }
+.form__input:focus::-moz-placeholder { opacity: 0; transition: opacity 0.3s linear; }
+.form__input:focus:-moz-placeholder { opacity: 0; transition: opacity 0.3s linear; }
+.form__input:focus:-ms-input-placeholder { opacity: 0; transition: opacity 0.3s linear; }

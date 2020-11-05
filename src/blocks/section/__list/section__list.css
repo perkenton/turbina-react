@@ -1,14 +1,8 @@
 .section__list {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.57;
-  list-style: none;
-  
-  color: #000000;
+  list-style: disc;
 
-  margin: 44px 0 0;
+  margin: 39px 0 0;
   padding-left: 0;
 
-  max-width: 716px;
+  max-width: 760px;
 }
