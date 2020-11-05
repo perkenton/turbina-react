@@ -1,9 +1,13 @@
 .player__song-text {
-  max-width: 378px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: 500;
   font-size: 20px;
   line-height: 27px;
+  color: #fff;
+
+  max-width: 378px;
+
   margin: 12px 0 0 0; 
 }
 

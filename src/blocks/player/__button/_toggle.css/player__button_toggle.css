@@ -3,10 +3,10 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  font-style: italic;
+  font-style: normal;
   text-align: center;
   color: white;
-  width: 135px;
+  min-width: 135px;
   height: 35px;
 
   border: 2px solid #FFFFFF;
@@ -19,7 +19,8 @@
 }
 
 .player__button_toggle:hover {
-  background-color: rgba(255, 255, 255, .4);
+  /*background-color: rgba(255, 255, 255, .4);*/
+  font-style: italic;
 }
 
 .player__button_toggle:focus {
