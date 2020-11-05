@@ -11,16 +11,11 @@
   transform: scale(1.2);
 }
 
-.player__button_dropout:focus {
-  outline: none;
-  transform: scale(1.2);
-}
-
 .player__button_dropout:active {
   transform: scale(1);
 }
 
-@media (max-width: 320px) {
+@media (max-width: 500px) {
   .player__button_dropout {
     min-width: 16px;
     height: 16px;

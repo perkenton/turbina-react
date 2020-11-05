@@ -20,7 +20,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 500px) {
   .player__song-title {
     font-size: 14px;
     line-height: 19px;

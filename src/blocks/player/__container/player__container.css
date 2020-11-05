@@ -2,15 +2,17 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-
   margin-bottom: 20px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 500px) {
   .player__container {
+    width: 100%;
+    margin-bottom: 30px;
     display: grid;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    column-gap: 12px;
+    grid-template-columns: 16px minmax(240px, 1fr) 16px;
+    grid-template-rows: 1fr 1fr;
   }
 }
