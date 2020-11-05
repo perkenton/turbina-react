@@ -9,3 +9,7 @@
   color: rgba(0, 0, 0, .4);
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
+
+.form__link:focus {
+  outline: 1px dotted #000;
+}
