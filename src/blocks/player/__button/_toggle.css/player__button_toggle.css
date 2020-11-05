@@ -1,4 +1,5 @@
 .player__button_toggle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -7,10 +8,28 @@
   color: white;
   width: 135px;
   height: 35px;
+
   border: 2px solid #FFFFFF;
-  margin: 0 20px 0 0;
-  box-sizing: border-box;
   border-radius: 30px;
+
+  margin: 0 20px 0 0;
+
+  box-sizing: border-box;
+  transition: .3s linear;
+}
+
+.player__button_toggle:hover {
+  background-color: rgba(255, 255, 255, .4);
+}
+
+.player__button_toggle:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, .4);
+}
+
+.player__button_toggle:active {
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, .7);
 }
 
 @media (max-width: 1024px) {
@@ -20,11 +39,19 @@
     font-size: 15px;
     line-height: 18px;
   }
+  .player__button_toggle:active {
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, .7);
+  }
 }
 
 @media (max-width: 320px) {
   .player__button_toggle {
     font-size: 12px;
     line-height: 15px;
+  }
+  .player__button_toggle:active {
+    font-size: 11px;
+    background-color: rgba(255, 255, 255, .7);
   }
 }
