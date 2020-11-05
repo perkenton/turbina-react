@@ -23,7 +23,8 @@
 }
 
 .form__input-submit:hover {
-  font-size: 18px;
+  background-color: #000;
+  color: #fff;
 }
 
 .form__input-submit:focus {

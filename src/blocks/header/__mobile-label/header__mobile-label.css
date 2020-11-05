@@ -3,7 +3,7 @@
   justify-content: flex-end;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   .header__mobile-label {
     display: flex;
   }
