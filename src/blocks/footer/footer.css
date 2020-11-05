@@ -3,6 +3,7 @@
 
 .footer {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
@@ -11,4 +12,12 @@
 
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+@media (max-width: 500px) {
+  .footer {
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 18px;
+  }
 }

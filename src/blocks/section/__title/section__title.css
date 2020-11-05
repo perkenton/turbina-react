@@ -10,3 +10,24 @@
 
   margin: 0;
 }
+
+@media (max-width: 1024px) {
+  .section__title {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 42px;
+    line-height: 51px;
+  }
+}
+
+@media (max-width: 425px) {
+  .section__title {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}

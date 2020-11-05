@@ -9,3 +9,16 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
+@media (max-width: 1024px) {
+  .footer__copyright {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer__copyright {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+}

@@ -9,3 +9,10 @@
 
   margin: 40px 0 0;
 }
+
+@media (max-width: 425px) {
+  .form__input-label {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}

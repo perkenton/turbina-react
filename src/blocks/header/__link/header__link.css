@@ -3,12 +3,12 @@
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 19px;
   color: #fff;
   border: 2px solid #fff;
   border-radius: 30px;
-  padding: 8px 16px;
+  padding: 6px 18px;
   transition: .3s linear;
 }
 
@@ -24,6 +24,14 @@
 .header__link:active {
   background-color: rgba(255, 255, 255, .7);
   font-size: 17px;
+}
+
+@media (max-width: 1024px) {
+  .header__link {
+    font-size: 15px;
+    line-height: 18px;
+    padding: 5px 17px;
+  }
 }
 
 @media (max-width: 425px) {
