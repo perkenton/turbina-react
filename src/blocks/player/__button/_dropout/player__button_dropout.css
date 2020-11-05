@@ -4,6 +4,20 @@
   min-width: 24px;
   margin: 0 0 0 0;
   background-image: url('../../../../images/player/close-button.svg');
+  transition: .3s linear;
+}
+
+.player__button_dropout:hover {
+  transform: scale(1.2);
+}
+
+.player__button_dropout:focus {
+  outline: none;
+  transform: scale(1.2);
+}
+
+.player__button_dropout:active {
+  transform: scale(1);
 }
 
 @media (max-width: 320px) {

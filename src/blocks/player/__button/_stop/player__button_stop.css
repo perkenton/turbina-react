@@ -1,3 +1,16 @@
 .player__button_stop {
   background-image: url('../../../../images/player/stop-button.svg');
 }
+
+.player__button_stop:hover {
+  transform: scale(1.2);
+}
+
+.player__button_stop:focus {
+  outline: none;
+  transform: scale(1.2);
+}
+
+.player__button_stop:active {
+  transform: scale(1);
+}
