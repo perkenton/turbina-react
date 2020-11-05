@@ -3,12 +3,34 @@
   flex-direction: column;
   align-items: center;
 
-  width: calc(100% - 22px);
+  max-width: 1260px;
+  width: calc(100% - 20px);
 
   box-sizing: border-box;
-  padding: 6px 57px;
+  padding-top: 22px;
+  padding-bottom: 48px;
+  padding-left: 53px;
+  padding-right: 53px;
   margin: 0;
 
   background-color: #ffffff;
   border-radius: 10px;
 }
+
+@media (max-width: 1024px) {
+  .main {
+    padding-bottom: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  .main {
+    width: calc(100% - 10px);
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
