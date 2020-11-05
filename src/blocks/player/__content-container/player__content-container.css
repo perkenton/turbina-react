@@ -1,7 +1,8 @@
-.player__playlist-container {
+.player__content-container {
+  max-width: 100%;
+  width: calc(100% - 80px);
   max-height: 104px;
-  max-width: 1150px;
-  margin: 30px auto; 
+  margin: 10px auto 30px auto; 
   overflow: auto;
 }
 
@@ -9,17 +10,14 @@
 ::-webkit-scrollbar {
   width: 3px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: rgba(243, 243, 243, 0.1)
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #fff;
