@@ -17,6 +17,7 @@
   transition: .3s linear;
 }
 
+/* Сделано для демострации динамики, будет переделано после перехода на React */
 .form__input-submit:hover + .form__submit-error {
   transform: scaleY(1);
 }
