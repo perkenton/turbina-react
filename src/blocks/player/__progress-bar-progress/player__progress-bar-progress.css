@@ -1,0 +1,6 @@
+.player__progress-bar-progress {
+  position: absolute;
+  top: 0px;
+  width: 35%;
+  border-bottom: 3px solid #FFF;
+}

@@ -1,20 +1,32 @@
-@import url("./__container/player__container.css");
-@import url("./__content-container/player__content-container.css");
-@import url("./__playlist/player__playlist.css");
-@import url("./__song/player__song.css");
-@import url("./__song-text/player__song-text.css");
-@import url("./__content-title/player__content-title.css");
-@import url("./__container/player__container.css");
-@import url("./__song-container/player__song-container.css");
-@import url("./__current-song/player__current-song.css");
-@import url("./__song-title/player__song-title.css");
-@import url("./__song-duration/player__song-duration.css");
 @import url("./__button/player__button.css");
+@import url("./__button/_dropout/player__button_dropout.css");
+@import url("./__button/_hidden/player__button_hidden.css");
 @import url("./__button/_play/player__button_play.css");
 @import url("./__button/_stop/player__button_stop.css");
-@import url("./__button/_hidden/player__button_hidden.css");
 @import url("./__button/_toggle.css/player__button_toggle.css");
-@import url("./__button/_dropout/player__button_dropout.css");
+
+@import url("./__container/player__container.css");
+@import url("./__content-container/player__content-container.css");
+@import url("./__content-title/player__content-title.css");
+@import url("./__current-song/player__current-song.css");
+@import url("./__playlist/player__playlist.css");
+
+@import url("./__progress-bar/player__progress-bar.css");
+@import url("./__progress-bar-bg/player__progress-bar-bg.css");
+@import url("./__progress-bar-progress/player__progress-bar-progress.css");
+
+@import url("./__song/player__song.css");
+@import url("./__song-container/player__song-container.css");
+@import url("./__song-duration/player__song-duration.css");
+@import url("./__song-link/player__song-link.css");
+@import url("./__song-text/player__song-text.css");
+@import url("./__song-title/player__song-title.css");
+
+
+
+
+
+
 
 .player {
 

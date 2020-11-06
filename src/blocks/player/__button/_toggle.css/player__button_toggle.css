@@ -17,7 +17,11 @@
 
 .player__button_toggle:hover {
   background-color: rgba(255, 255, 255, .4);
-  font-style: italic;
+}
+
+.player__button_toggle:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, .4);
 }
 
 .player__button_toggle:active {

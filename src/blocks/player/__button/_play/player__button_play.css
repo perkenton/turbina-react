@@ -7,6 +7,7 @@
   transform: scale(1.2);
 }
 
-.player__button_play:active {
-  transform: scale(1);
+.player__button_play:focus {
+  outline: none;
+  transform: scale(1.2);
 }
