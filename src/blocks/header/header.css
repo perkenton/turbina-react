@@ -15,10 +15,16 @@
 
 .header {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 10px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   transition: .6s linear;
+}
+
+@media (max-width: 768px) {
+  .header {
+    min-height: calc(100vh - 8px);
+  }
 }
