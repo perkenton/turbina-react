@@ -7,10 +7,6 @@
   margin-left: 20px;
   margin-right: 20px;
 
-  /*display: flex;*/
-  /*flex-direction: row;*/
-  /*flex-wrap: wrap;*/
-
   display: grid;
   grid-template-columns: minmax(192px, max-content) 1fr;
   grid-template-rows: 1fr 3px;
@@ -18,6 +14,11 @@
   grid-template-areas:
     "player__current-song player__song-duration"
     "progress-bar progress-bar";
+}
 
-  /*overflow: auto;*/
+@media (max-width: 500px) {
+  .player__song-container {
+    margin: 0;
+    width: 100%;
+  }
 }

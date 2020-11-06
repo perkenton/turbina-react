@@ -11,7 +11,3 @@
   outline: none;
   transform: scale(1.2);
 }
-
-.player__button_play:active {
-  transform: scale(1);
-}

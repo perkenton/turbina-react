@@ -2,17 +2,3 @@
   margin: 16px 0;
   padding: 0;
 }
-
-@media (max-width: 1024px) {
-  .player__song {
-    font-size: 18px;
-    line-height: 22px;
-  }
-}
-
-@media (max-width: 320px) {
-  .player__song {
-    font-size: 14px;
-    line-height: 19px;
-  }
-}

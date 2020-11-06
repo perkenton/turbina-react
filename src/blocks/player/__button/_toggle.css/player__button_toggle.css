@@ -8,12 +8,9 @@
   color: white;
   min-width: 135px;
   height: 35px;
-
   border: 2px solid #FFFFFF;
   border-radius: 30px;
-
   margin: 0 20px 0 0;
-
   box-sizing: border-box;
   transition: .3s linear;
 }
@@ -45,13 +42,13 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 500px) {
   .player__button_toggle {
     font-size: 12px;
     line-height: 15px;
-  }
-  .player__button_toggle:active {
-    font-size: 11px;
-    background-color: rgba(255, 255, 255, .7);
+    margin: 20px auto 0 auto;
+    width: calc(100%- 51px);
+    order: 1;
+    grid-column: 1/4;
   }
 }

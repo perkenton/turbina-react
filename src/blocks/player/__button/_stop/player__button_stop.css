@@ -10,7 +10,3 @@
   outline: none;
   transform: scale(1.2);
 }
-
-.player__button_stop:active {
-  transform: scale(1);
-}

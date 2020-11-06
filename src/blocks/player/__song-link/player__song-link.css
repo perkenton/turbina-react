@@ -20,3 +20,17 @@
 .player__song-link:active {
   color: rgba(255, 255, 255, 1);
 }
+
+@media (max-width: 1024px) {
+  .player__song-link {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .player__song-link {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
