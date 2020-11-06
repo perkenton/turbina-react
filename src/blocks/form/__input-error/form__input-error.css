@@ -1,0 +1,27 @@
+.form__input-error {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ff0000;
+
+  margin-top: 6px;
+
+  transform: scaleY(0);
+  transform-origin: 100% 0;
+  transition: .3s linear;
+}
+
+/* Сделано для демострации динамики, будет переделано после перехода на React */
+.form__input:hover + .form__input-error {
+  transform: scaleY(1);
+}
+
+@media (max-width: 425px) {
+  .form__input-error {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
