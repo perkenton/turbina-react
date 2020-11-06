@@ -1,5 +1,5 @@
 .form__input-submit {
-  max-width: 600px;
+  /* max-width: 600px; */
   width: 100%;
   min-height: 60px;
 
@@ -36,11 +36,11 @@
   font-size: 16px;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .form__input-submit {
     max-width: 648px;
   }
-}
+} */
 
 @media (max-width: 425px) {
   .form__input-submit {

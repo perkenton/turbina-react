@@ -1,5 +1,7 @@
-@import url('./__error/form__error.css');
+@import url('./__input-error/form__input-error.css');
+@import url('./__submit-error/form__submit-error.css');
 @import url('./__input/form__input.css');
+@import url('./__input/_incorrect/form__input_incorrect.css');
 @import url('./__textarea/form__textarea.css');
 @import url('./__input-radio/form__input-radio.css');
 @import url('./__input-submit/form__input-submit.css');
@@ -14,6 +16,7 @@
   align-items: flex-start;   
 
   width: 100%;
+  max-width: 600px;
 
   padding: 61px 0;
   box-sizing: border-box;

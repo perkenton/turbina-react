@@ -9,7 +9,7 @@
   margin: 10px 0 0;
 
   box-sizing: border-box;
-  padding: 16px 0 0 0;
+  padding: 16px 0;
 
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -39,11 +39,11 @@
 .form__textarea:focus:-moz-placeholder { opacity: 0; transition: opacity 0.3s linear; }
 .form__textarea:focus:-ms-input-placeholder { opacity: 0; transition: opacity 0.3s linear; }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .form__textarea {
     max-width: 648px;
   }
-}
+} */
 
 @media (max-width: 425px) {
   .form__textarea {

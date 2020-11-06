@@ -99,18 +99,22 @@
       <h2 class="section__title">Форма</h2>
       <p class="section__paragraph">Заполняя эту форму, вы&nbsp;становитесь частью проекта.</p>
 
-      <form action="" class="form">
-        <input type="text" class="form__input" placeholder="Имя и фамилия автора">
-        <span class="form__error">Какая-то ошибка*</span>
-        <input type="tel" class="form__input" placeholder="Телефон">
-        <input type="email" class="form__input" placeholder="Почта">
-        <textarea name="" id="" class="form__textarea" placeholder="Стихи"></textarea>
+      <form action="" class="form" novalidate>
+        <input type="text" id="author" class="form__input" placeholder="Имя и фамилия автора">
+        <span class="form__input-error" id="author-error"></span>
+        <input type="tel" id="phone" class="form__input" placeholder="Телефон">
+        <span class="form__input-error" id="phone-error"></span>
+        <input type="email" id="email" class="form__input form__input_incorrect" placeholder="Почта" value="Pochta2mail.com">
+        <span class="form__input-error" id="email-error">Какая-то ошибка*</span>
+        <textarea name="" id="lyrics" class="form__textarea" placeholder="Стихи">Я бабуленьку родную, очень крепко поцелую, ведь бабуленька моя очень-очень добрая.</textarea>
+        <span class="form__input-error" id="lyrics-error"></span>
         <label for="offer" class="form__input-label">
           <input type="checkbox" id="offer" class="form__input-radio">
           <span class="form__input-radio_visible"></span>
           Согласен с <a href="#" class="form__link">офертой</a>
         </label>
         <button type="submit" class="form__input-submit">Отправить форму</button>
+        <span class="form__submit-error">Упс, что-то пошло не так и форма не отправилась, попробуйте ещё раз!</span>
       </form>
     </section>
   </main>
