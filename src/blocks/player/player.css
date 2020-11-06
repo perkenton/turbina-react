@@ -9,6 +9,7 @@
 @import url("./__current-song/player__current-song.css");
 @import url("./__song-title/player__song-title.css");
 @import url("./__song-duration/player__song-duration.css");
+@import url("./__song-link/player__song-link.css");
 @import url("./__button/player__button.css");
 @import url("./__button/_play/player__button_play.css");
 @import url("./__button/_stop/player__button_stop.css");

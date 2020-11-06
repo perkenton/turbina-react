@@ -1,0 +1,22 @@
+.player__song-link {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  text-decoration: none;
+  transition: .3s linear;
+}
+
+.player__song-link:hover {
+  color: rgba(255, 255, 255, .7);
+}
+
+.player__song-link:focus {
+  outline: 1px dotted #fff;
+}
+
+.player__song-link:active {
+  color: rgba(255, 255, 255, 1);
+}

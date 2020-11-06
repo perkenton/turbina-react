@@ -5,7 +5,17 @@
   font-size: 20px;
   line-height: 24px;
   color: #fff;
-  margin: 0;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: 0;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 6px;
+  padding-right: 0;
+
+  grid-area: player__song-duration;
 }
 
 @media (max-width: 1024px) {

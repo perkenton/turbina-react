@@ -3,4 +3,6 @@
   padding: 13px 0;
   justify-content: space-between;
   overflow: hidden;
+
+  grid-area: player__current-song;
 }
