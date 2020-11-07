@@ -1,32 +1,35 @@
-.player__song-duration {
+.player__song-link {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-size: 20px;
   line-height: 24px;
   color: #fff;
+  text-decoration: none;
+  transition: .3s linear;
+}
 
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: 0;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  padding-left: 6px;
-  padding-right: 0;
+.player__song-link:hover {
+  color: rgba(255, 255, 255, .7);
+}
 
-  grid-area: player__song-duration;
+.player__song-link:focus {
+  outline: 1px dotted #fff;
+}
+
+.player__song-link:active {
+  color: rgba(255, 255, 255, 1);
 }
 
 @media (max-width: 1024px) {
-  .player__song-duration {
+  .player__song-link {
     font-size: 18px;
     line-height: 22px;
   }
 }
 
 @media (max-width: 500px) {
-  .player__song-duration {
+  .player__song-link {
     font-size: 14px;
     line-height: 19px;
   }

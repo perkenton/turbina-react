@@ -1,6 +1,0 @@
-@import url("./__bg/progress-bar__bg.css");
-@import url("./__progress/progress-bar__progress.css");
-
-.progress-bar {
-  position: relative;
-}

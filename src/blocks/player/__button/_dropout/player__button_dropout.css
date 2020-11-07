@@ -11,8 +11,9 @@
   transform: scale(1.2);
 }
 
-.player__button_dropout:active {
-  transform: scale(1);
+.player__button_dropout:focus {
+  outline: none;
+  transform: scale(1.2);
 }
 
 @media (max-width: 500px) {
