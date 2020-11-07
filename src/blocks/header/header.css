@@ -11,6 +11,7 @@
 @import url(./__mobile-submenu/header__mobile-submenu.css);
 @import url(./__player-block/header__player-block.css);
 @import url(./__title/header__title.css);
+@import url(./__rotation/header__rotation.css);
 @import url(./__top-wrapper/header__top-wrapper.css);
 
 .header {
@@ -21,6 +22,9 @@
   justify-content: space-between;
   align-items: center;
   transition: .6s linear;
+
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
