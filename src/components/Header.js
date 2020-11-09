@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../images/logo.svg";
 import turbinaLogo from "../images/turbina-logo.svg";
+import svgComponents from "./svgComponents/svgComponents"
 import Player from "./Player";
 import StreamingLink from "./StreamingLink";
 import {
@@ -18,7 +19,8 @@ function Header() {
           rel="noreferrer"
           className="header__logo-link"
         >
-          <img src={ logo } alt="Логотип магазина Маршак" className="header__logo" />
+
+          <svgComponents.MainLogo />
         </a>
         <div className="header__links-block">
           <input type="checkbox" id="checkbox" className="header__mobile-checkbox" />
@@ -42,7 +44,7 @@ function Header() {
       </div>
 
       <h1 className="header__title">
-        <img src={turbinaLogo} alt="Логотип Турбины" className="header__logo-title" />
+        <svgComponents.TurbinaLogo />
       </h1>
 
       <Player />
