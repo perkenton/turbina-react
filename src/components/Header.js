@@ -2,6 +2,8 @@ import React from "react";
 import logo from "../images/logo.svg";
 import turbinaLogo from "../images/turbina-logo.svg";
 import Player from "./Player";
+import StreamingLink from "./StreamingLink";
+import StreamingLinks from '../constants/constants';
 
 function Header() {
   return (
@@ -23,46 +25,15 @@ function Header() {
           </label>
 
           <ul className="header__links">
-            <li className="header__link-item">
-              <a
-                href="https://music.yandex.ru"
-                target="_blank"
-                rel="noreferrer"
-                className="header__link"
-              >
-                Яндекс.Музыка ↗
-              </a>
-            </li>
-            <li className="header__link-item">
-              <a
-                href="https://www.spotify.com"
-                target="_blank"
-                rel="noreferrer"
-                className="header__link"
-              >
-                Spotify ↗
-              </a>
-            </li>
-            <li className="header__link-item">
-              <a
-                href="https://music.apple.com"
-                target="_blank"
-                rel="noreferrer"
-                className="header__link"
-              >
-                Apple Music ↗
-              </a>
-            </li>
-            <li className="header__link-item">
-              <a
-                href="https://vk.com/vkmusic"
-                target="_blank"
-                rel="noreferrer"
-                className="header__link"
-              >
-                VK Music ↗
-              </a>
-            </li>
+            {StreamingLinks.map(({id, name, link}) => {
+              return (
+                <StreamingLink
+                  key={id}
+                  name={name}
+                  link={link}
+                />
+              );
+            })}
           </ul>
         </div>
       </div>
