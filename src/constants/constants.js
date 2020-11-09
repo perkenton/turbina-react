@@ -21,4 +21,11 @@ const StreamingLinks = [
   },
 ];
 
-export default StreamingLinks;
+const MainLogo = {
+  link: 'https://marshakbooks.ru'
+};
+
+export {
+  StreamingLinks,
+  MainLogo,
+};

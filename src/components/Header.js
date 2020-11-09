@@ -3,19 +3,22 @@ import logo from "../images/logo.svg";
 import turbinaLogo from "../images/turbina-logo.svg";
 import Player from "./Player";
 import StreamingLink from "./StreamingLink";
-import StreamingLinks from '../constants/constants';
+import {
+  StreamingLinks,
+  MainLogo,
+} from '../constants/constants';
 
 function Header() {
   return (
     <header className="header">
       <div className="header__top-wrapper">
         <a
-          href="https://marshakbooks.ru"
+          href={ MainLogo.link }
           target="_blank"
           rel="noreferrer"
           className="header__logo-link"
         >
-          <img src={logo} alt="Логотип магазина Маршак" className="header__logo" />
+          <img src={ logo } alt="Логотип магазина Маршак" className="header__logo" />
         </a>
         <div className="header__links-block">
           <input type="checkbox" id="checkbox" className="header__mobile-checkbox" />
