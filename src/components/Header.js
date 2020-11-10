@@ -4,21 +4,21 @@ import svgComponents from "./svgComponents/svgComponents";
 import Player from "./Player";
 import StreamingLink from "./StreamingLink";
 import {
-  StreamingLinks,
-  MainLogo,
+  STREAMING_LINKS,
+  MAIN_LOGO,
 } from '../constants/constants';
 
 function Header() {
-  function DesireHeaderHeight() {
+  function desireHeaderHeight() {
     const height = use100vh();
     return (document.body.clientWidth > 768) ? height - 10 : height - 8;
   }
 
   return (
-    <header className="header" style={{ height: DesireHeaderHeight() }}>
+    <header className="header" style={{ height: desireHeaderHeight() }}>
       <div className="header__top-wrapper">
         <a
-          href={ MainLogo.link }
+          href={ MAIN_LOGO.link }
           target="_blank"
           rel="noreferrer"
           className="header__logo-link"
@@ -34,7 +34,7 @@ function Header() {
           </label>
 
           <ul className="header__links">
-            {StreamingLinks.map(({id, name, link}) => {
+            {STREAMING_LINKS.map(({id, name, link}) => {
               return (
                 <StreamingLink
                   key={id}

@@ -1,4 +1,4 @@
-const StreamingLinks = [
+const STREAMING_LINKS = [
   {
     id: 1,
     name: 'Яндекс.Музыка ↗',
@@ -21,11 +21,11 @@ const StreamingLinks = [
   },
 ];
 
-const MainLogo = {
+const MAIN_LOGO = {
   link: 'https://marshakbooks.ru'
 };
 
 export {
-  StreamingLinks,
-  MainLogo,
+  STREAMING_LINKS,
+  MAIN_LOGO,
 };
