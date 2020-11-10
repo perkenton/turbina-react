@@ -1,5 +1,6 @@
 import React from "react";
-import svgComponents from "./svgComponents/svgComponents"
+import { use100vh } from 'react-div-100vh'
+import svgComponents from "./svgComponents/svgComponents";
 import Player from "./Player";
 import StreamingLink from "./StreamingLink";
 import {
@@ -8,8 +9,13 @@ import {
 } from '../constants/constants';
 
 function Header() {
+  function DesireHeaderHeight() {
+    const height = use100vh();
+    return (document.body.clientWidth > 768) ? height - 10 : height - 8;
+  }
+
   return (
-    <header className="header">
+    <header className="header" style={{ height: DesireHeaderHeight() }}>
       <div className="header__top-wrapper">
         <a
           href={ MainLogo.link }
