@@ -9,13 +9,13 @@ import {
 } from '../constants/constants';
 
 function Header() {
-  function desireHeaderHeight() {
+  function DesireHeaderHeight() {
     const height = use100vh();
     return (document.body.clientWidth > 768) ? height - 10 : height - 8;
   }
 
   return (
-    <header className="header" style={{ height: desireHeaderHeight() }}>
+    <header className="header" style={{ height: DesireHeaderHeight() }}>
       <div className="header__top-wrapper">
         <a
           href={ MAIN_LOGO.link }
