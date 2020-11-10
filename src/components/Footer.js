@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterLink } from "../constants/constants"
+import { FOOTER_LINK } from "../constants/constants"
 
 function Footer() {
   return (
@@ -8,7 +8,7 @@ function Footer() {
       <p className="footer__text">
         Сделано студентами{" "}
         <a
-          href={ FooterLink.link }
+          href={ FOOTER_LINK.link }
           target="_blank"
           rel="noreferrer"
           className="footer__link"

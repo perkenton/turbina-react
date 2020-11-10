@@ -1,7 +1,7 @@
-const FooterLink = {
+const FOOTER_LINK = {
   link: 'https://praktikum.yandex.ru'
 };
 
 export {
-  FooterLink
+  FOOTER_LINK
 };
