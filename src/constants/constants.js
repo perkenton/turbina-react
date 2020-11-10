@@ -25,7 +25,12 @@ const MAIN_LOGO = {
   link: 'https://marshakbooks.ru'
 };
 
+const FOOTER_LINK = {
+  link: 'https://praktikum.yandex.ru'
+};
+
 export {
   STREAMING_LINKS,
   MAIN_LOGO,
+  FOOTER_LINK
 };
