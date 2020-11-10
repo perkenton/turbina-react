@@ -1,0 +1,6 @@
+.player__timebar {
+  position: relative;
+  height: 3px;
+  background-color: rgba(243, 243, 243, 0.3);
+  grid-area: progress-bar;
+}

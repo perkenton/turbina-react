@@ -5,15 +5,14 @@
 @import url("./__button/_stop/player__button_stop.css");
 @import url("./__button/_toggle.css/player__button_toggle.css");
 
-@import url("./__container/player__container.css");
+@import url("./__controller/player__controller.css");
 @import url("./__content-container/player__content-container.css");
 @import url("./__content-title/player__content-title.css");
 @import url("./__current-song/player__current-song.css");
 @import url("./__playlist/player__playlist.css");
 
-@import url("./__progress-bar/player__progress-bar.css");
-@import url("./__progress-bar-bg/player__progress-bar-bg.css");
-@import url("./__progress-bar-progress/player__progress-bar-progress.css");
+@import url("./__timebar/player__timebar.css");
+@import url("./__timebar-progress/player__timebar-progress.css");
 
 @import url("./__song/player__song.css");
 @import url("./__song-container/player__song-container.css");

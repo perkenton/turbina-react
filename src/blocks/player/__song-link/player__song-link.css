@@ -14,7 +14,7 @@
 }
 
 .player__song-link:focus {
-  outline: 1px dotted #fff;
+  outline: none;
 }
 
 .player__song-link:active {

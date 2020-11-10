@@ -1,21 +1,24 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useState } from 'react';
+import playlist from '../constants/playlist';
+import PlaylistItem from './PlaylistItem';
 
-function Player() {
+const Player = () => {
+  const [ currentSong, setCurrentSong ] = useState(playlist[0])
+
   return (
     <div className="header__player-block player">
-      <div className="player__container">
+      <div className="player__controller">
         <button className="player__button player__button_play"></button>
         <div className="player__song-container">
           <div className="player__current-song">
             <p className="player__song-title">
-              Контур — Хадн Дадн feat. Варя Карпова и Федя Быстров
+            {currentSong.title} — {currentSong.author} <span style={{fontStyle: 'italic'}}>feat.</span> {currentSong.artist}
             </p>
           </div>
           <p className="player__song-duration">2:24</p>
-          <div className="player__progress-bar">
-            <div className="player__progress-bar-bg"></div>
-            <div className="player__progress-bar-bg player__progress-bar-progress"></div>
+          <div className="player__timebar">
+            <div className="player__timebar player__timebar-progress"></div>
           </div>
         </div>
         <button className="player__button player__button_toggle">Релизы</button>
@@ -23,27 +26,15 @@ function Player() {
       </div>
       <div className="player__content-container">
         <h2 className="player__content-title">Релизы:</h2>
+        
         <ul className="player__playlist">
-          <li className="player__song">
-            <a href="#" className="player__song-link">
-              Лодка — СБПЧ feat. Маруся Романова
-            </a>
-          </li>
-          <li className="player__song">
-            <a href="#" className="player__song-link">
-              Кирпичи — Инди группа feat. Пётр Сковородников
-            </a>
-          </li>
-          <li className="player__song">
-            <a href="#" className="player__song-link">
-              Лодка — СБПЧ feat. Маруся Романова
-            </a>
-          </li>
-          <li className="player__song">
-            <a href="#" className="player__song-link">
-              Лодка — СБПЧ feat. Маруся Романова
-            </a>
-          </li>
+          {playlist.map(item => <PlaylistItem
+            key={item.id}
+            item={item}
+            onClick={item => {
+              setCurrentSong(item)
+            }}
+          />)}
         </ul>
       </div>
       {/* <div className="player__content-container">
