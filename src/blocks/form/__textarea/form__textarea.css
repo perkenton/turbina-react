@@ -24,10 +24,7 @@
   outline: none;
 }
 
-.form__textarea::-webkit-input-placeholder { color: rgba(0, 0, 0, .4); }
-.form__textarea::-moz-placeholder          { color: rgba(0, 0, 0, .4); }
-.form__textarea::-ms-input-placeholder     { color: rgba(0, 0, 0, .4); }
-.form__textarea::placeholder               { color: rgba(0, 0, 0, .4); }
+.form__textarea::placeholder { color: rgba(0, 0, 0, .4); }
 
 .form__textarea::-webkit-input-placeholder { opacity: 1; transition: opacity 0.3s linear; }
 .form__textarea::-moz-placeholder { opacity: 1; transition: opacity 0.3s linear; }
