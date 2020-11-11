@@ -72,6 +72,8 @@ const AddAuthorForm = () => {
             .min(2, "Длина имени должна быть больше либо равна 2")
             .required("Обязательное поле"),
           phone: Yup.string()
+            .matches(/^(8|\+7)(\(\d{3}\)[\s]?(\d{3})-(\d{2})-(\d{2}))|(8|\+7)([\s](\d{3})-(\d{3})-(\d{2})-(\d{2}))|(8|\+7)(\d{10})$/, 
+              { message: "Некорректный формат номера телефона", excludeEmptyString: true })
             .required("Обязательное поле"),
           email: Yup.string()
             .email("Некорректный формат эл.почты")
@@ -88,44 +90,57 @@ const AddAuthorForm = () => {
         }}
 
       >
-        <Form className="form">
-          <TextInput
-            type="text"
-            name="author"
-            className="form__input"
-            placeholder="Имя и фамилия автора"
-          />
-          <TextInput
-            type="tel" 
-            name="phone" 
-            className="form__input" 
-            placeholder="Телефон"
-          />
-          <TextInput
-            type="email"
-            name="email"
-            className="form__input"
-            placeholder="Почта"
-          />
-          <TextArea
-            name="lyrics"
-            className="form__textarea"
-            placeholder="Стихи"
-          />
-          <Checkbox 
-            name="acceptedTerms"
-            className="form__input-radio"
-            labelClassName="form__input-label"
-          >
-            <span className="form__input-radio-visible"></span>
-            Согласен с{" "}
-            <a href="#" className="form__link">
-              офертой
-            </a>
-          </Checkbox>
+        {({ isSubmitting, errors }) => (
+          <Form className="form">
+            <TextInput
+              type="text"
+              name="author"
+              className="form__input"
+              placeholder="Имя и фамилия автора"
+            />
+            <TextInput
+              type="tel" 
+              name="phone" 
+              className="form__input" 
+              placeholder="Телефон"
+            />
+            <TextInput
+              type="email"
+              name="email"
+              className="form__input"
+              placeholder="Почта"
+            />
+            <TextArea
+              name="lyrics"
+              className="form__textarea"
+              placeholder="Стихи"
+            />
+            <Checkbox 
+              name="acceptedTerms"
+              className="form__input-radio"
+              labelClassName="form__input-label"
+            >
+              <span className="form__input-radio-visible"></span>
+              Согласен с{" "}
+              <a href="#" className="form__link">
+                офертой
+              </a>
+            </Checkbox>
 
-          <button type="submit" className="form__input-submit">Отправить</button>
-        </Form>
+            <button 
+              type="submit" 
+              className="form__input-submit"
+              disabled={ isSubmitting | errors }
+            >
+                Отправить
+            </button>
+            { isSubmitting ? (
+              <span className="form__submit-error">
+                Упс, что-то пошло не так и форма не отправилась, попробуйте ещё раз!
+              </span>
+              ) : <span className="form__submit-error_hidden"></span>}
+          </Form>
+        )}
       </Formik>
     </>
   );
