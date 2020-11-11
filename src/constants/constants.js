@@ -1,5 +1,3 @@
-import React from "react";
-
 const STREAMING_LINKS = [
   {
     id: 1,
