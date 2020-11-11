@@ -15,7 +15,7 @@
 }
 
 /* Сделано для демострации динамики, будет переделано после перехода на React */
-.form__input:hover + .form__input-error {
+.form__input + .form__input-error {
   transform: scaleY(1);
 }
 

@@ -24,6 +24,10 @@
   outline: none;
 }
 
+.form__textarea + .form__input-error {
+  transform: scaleY(1);
+}
+
 .form__textarea::-webkit-input-placeholder { color: rgba(0, 0, 0, .4); }
 .form__textarea::-moz-placeholder          { color: rgba(0, 0, 0, .4); }
 .form__textarea::-ms-input-placeholder     { color: rgba(0, 0, 0, .4); }
