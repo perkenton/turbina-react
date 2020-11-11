@@ -21,7 +21,9 @@
 @import url("./__song-text/player__song-text.css");
 @import url("./__song-title/player__song-title.css");
 
-
+.audio {
+  display: none;
+}
 
 
 
