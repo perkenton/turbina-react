@@ -1,7 +1,7 @@
 import React from "react";
 import { use100vh } from 'react-div-100vh'
 import svgComponents from "./svgComponents/svgComponents";
-import Player from "./Player";
+import Player from "./Player/Player";
 import StreamingLink from "./StreamingLink";
 import {
   STREAMING_LINKS,

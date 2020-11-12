@@ -7,6 +7,7 @@
   margin: 16px 0;
   padding: 0;
   color: #fff;
+  cursor: pointer;
   text-decoration: none;
   transition: .3s linear;
 }

@@ -1,5 +1,7 @@
 .player__album {
-  background-color: #C4C4C4;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 4px;
   width: 174px;;
   height: 174px;
