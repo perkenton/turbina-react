@@ -1,8 +1,10 @@
 import React from "react";
+
 import Section from "./Section";
 import SectionParagraph from "./SectionParagraph";
 import SectionList from "./SectionList";
-import AddAuthorForm from "./../Form";
+import AddAuthorForm from "../Form/AddAuthorForm";
+
 import {
   TEXT_SECTIONS_DATA
 } from '../../constants/constants';
@@ -25,16 +27,10 @@ function Main() {
         )
       })}  
 
-      <Section title="Форма">
-        <SectionParagraph text= "Заполняя эту форму, вы&nbsp;становитесь частью проекта." />
-     
+      <Section key="form" title="Форма">
+        <SectionParagraph text= "Заполняя эту форму, вы&nbsp;становитесь частью проекта." />     
         <AddAuthorForm />
-
-        <span className="form__submit-error">
-          Упс, что-то пошло не так и форма не отправилась, попробуйте ещё раз!
-        </span>
-      </Section>
-      
+      </Section>      
     </main>
   );
 }

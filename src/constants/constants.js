@@ -44,7 +44,7 @@ const TEXT_SECTIONS_DATA = [
     ]
   },
   {
-    id: 1,
+    id: 3,
     title: 'Тезисы',
     type: 'list',
     content: [
@@ -72,9 +72,15 @@ const FOOTER_LINK = {
   link: 'https://praktikum.yandex.ru'
 };
 
+const apiSettings = {
+  user: 'SomeUser',
+  url: 'SomeUrl'
+};
+
 export {
   STREAMING_LINKS,
   MAIN_LOGO,
   TEXT_SECTIONS_DATA,
-  FOOTER_LINK
+  FOOTER_LINK,
+  apiSettings
 };

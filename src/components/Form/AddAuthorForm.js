@@ -1,61 +1,17 @@
 import React from "react";
-import { Formik, Form, useField } from "formik";
+import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
-const TextInput = ({ className, ...props }) => {
-  const [field, meta] = useField(props);
-    
-  return (
-    <>
-      <input 
-        {...field} 
-        className={meta.touched && meta.error ? `${className} ${className}_incorrect` : className} 
-        {...props} 
-      />
-      {meta.touched && meta.error ? (
-        <span className={`${className}-error`}>{meta.error}</span>
-      ) : (
-        <span className={`${className}-error_hidden`}></span>
-      )}
-    </>
-  );
-};
+import TextInput from "./TextInput";
+import TextArea from "./TextArea";
+import Checkbox from "./Checkbox";
+import SubmitButton from "./SubmitButton";
 
-const TextArea = ({ className, ...props }) => {
-  const [field, meta] = useField(props);
-  
-  return (
-    <>
-      <textarea 
-        {...field} 
-        className={meta.touched && meta.error ? `${className} ${className}_incorrect` : className} 
-        {...props} 
-      />
-      {meta.touched && meta.error ? (
-        <span className="form__input-error">{meta.error}</span>
-      ) : (
-        <span className="form__input-error_hidden"></span>
-      )}
-    </>
-  );
-};
-
-const Checkbox = ({ children, labelClassName, ...props }) => {
-  const [field, meta] = useField({ ...props, type: "checkbox" });
-  return (
-    <>
-      <label className={labelClassName}>
-        <input {...field} {...props} type="checkbox" />
-        {children}
-      </label>
-      {meta.touched && meta.error ? (
-        <span className="form__input-error">{meta.error}</span>
-      ) : <span className="form__input-error_hidden"></span>}
-    </>
-  );
-};
+import api from './../../utils/api';
 
 const AddAuthorForm = () => {
+  const [incorrectRequest, setIncorrectRequest] = React.useState(false);
+
   return (
     <>
       <Formik
@@ -84,13 +40,17 @@ const AddAuthorForm = () => {
             .required("Обязательное поле")
         })}
 
-        onSubmit={async (values, { setSubmitting }) => {
-          await new Promise(r => setTimeout(r, 500));
-          setSubmitting(false);
+        onSubmit={async (values, { setSubmitting, resetForm }) => {
+          const hasError = await api.addAuthor(values); 
+
+          setIncorrectRequest(hasError);                      
+          setSubmitting(false);  
+          
+          if (!hasError) {resetForm();}
         }}
 
       >
-        {({ isSubmitting, errors }) => (
+        {({ isSubmitting, errors, values }) => (
           <Form className="form">
             <TextInput
               type="text"
@@ -126,19 +86,14 @@ const AddAuthorForm = () => {
                 офертой
               </a>
             </Checkbox>
-
-            <button 
-              type="submit" 
+            <SubmitButton 
+              name="submit"
               className="form__input-submit"
-              disabled={ isSubmitting | errors }
-            >
-                Отправить
-            </button>
-            { isSubmitting ? (
-              <span className="form__submit-error">
-                Упс, что-то пошло не так и форма не отправилась, попробуйте ещё раз!
-              </span>
-              ) : <span className="form__submit-error_hidden"></span>}
+              disabled={ isSubmitting | (Object.keys(errors).length > 0) | !values.acceptedTerms }
+            />             
+            {incorrectRequest ? (
+              <span className="form__submit-error">Упс, что-то пошло не так и форма не отправилась, попробуйте ещё раз!</span>
+            ) : <span className="form__submit-error_hidden"></span>}  
           </Form>
         )}
       </Formik>

@@ -11,16 +11,16 @@
   text-align: center;
 
   margin-top: 20px;
-
+/* 
   transform: scaleY(0);
   transform-origin: 100% 0;
-  transition: .3s linear;
+  transition: .3s linear; */
 }
 
 /* Сделано для демострации динамики, будет переделано после перехода на React */
-.form__input-submit:hover + .form__submit-error {
+/* .form__input-submit:hover + .form__submit-error {
   transform: scaleY(1);
-}
+} */
 
 @media (max-width: 425px) {
   .form__submit-error {
