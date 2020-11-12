@@ -24,26 +24,10 @@
   outline: none;
 }
 
-<<<<<<< HEAD
 .form__textarea + .form__input-error {
   transform: scaleY(1);
 }
 
-.form__textarea::-webkit-input-placeholder { color: rgba(0, 0, 0, .4); }
-.form__textarea::-moz-placeholder          { color: rgba(0, 0, 0, .4); }
-.form__textarea::-ms-input-placeholder     { color: rgba(0, 0, 0, .4); }
-.form__textarea::placeholder               { color: rgba(0, 0, 0, .4); }
-
-.form__textarea::-webkit-input-placeholder { opacity: 1; transition: opacity 0.3s linear; }
-.form__textarea::-moz-placeholder { opacity: 1; transition: opacity 0.3s linear; }
-.form__textarea:-moz-placeholder { opacity: 1; transition: opacity 0.3s linear; }
-.form__textarea:-ms-input-placeholder { opacity: 1; transition: opacity 0.3s linear; }
-
-.form__textarea:focus::-webkit-input-placeholder { opacity: 0; transition: opacity 0.3s linear; }
-.form__textarea:focus::-moz-placeholder { opacity: 0; transition: opacity 0.3s linear; }
-.form__textarea:focus:-moz-placeholder { opacity: 0; transition: opacity 0.3s linear; }
-.form__textarea:focus:-ms-input-placeholder { opacity: 0; transition: opacity 0.3s linear; }
-=======
 .form__textarea::placeholder {
   color: rgba(0, 0, 0, .4);
   opacity: 1;
@@ -54,8 +38,6 @@
   opacity: 0;
   transition: opacity 0.3s linear;
 }
->>>>>>> develop-react
-
 
 @media (max-width: 425px) {
   .form__textarea {

@@ -61,17 +61,53 @@ function Main() {
         </ul>
       </section>
 
-      <section className="section add-author">
+      <section className="section">
         <h2 className="section__title">Форма</h2>
         <p className="section__paragraph">
           Заполняя эту форму, вы&nbsp;становитесь частью проекта.
         </p>
 
-        <AddAuthorForm />
-
-        <span className="form__submit-error">
-          Упс, что-то пошло не так и форма не отправилась, попробуйте ещё раз!
-        </span>
+        <form className="form" noValidate>
+          <input
+            type="text"
+            id="author"
+            className="form__input"
+            placeholder="Имя и фамилия автора"
+          />
+          <span className="form__input-error" id="author-error"></span>
+          <input type="tel" id="phone" className="form__input" placeholder="Телефон" />
+          <span className="form__input-error" id="phone-error"></span>
+          <input
+            type="email"
+            id="email"
+            className="form__input form__input_incorrect"
+            placeholder="Почта"
+          />
+          <span className="form__input-error" id="email-error">
+            Какая-то ошибка*
+          </span>
+          <textarea
+            id="lyrics"
+            className="form__textarea"
+            placeholder="Стихи"
+            defaultValue="Я бабуленьку родную, очень крепко поцелую, ведь бабуленька моя очень-очень добрая."
+          ></textarea>
+          <span className="form__input-error" id="lyrics-error"></span>
+          <label htmlFor="offer" className="form__input-label">
+            <input type="checkbox" id="offer" className="form__input-radio" />
+            <span className="form__input-radio-visible"></span>
+            Согласен с{" "}
+            <a href="#" className="form__link">
+              офертой
+            </a>
+          </label>
+          <button type="submit" className="form__input-submit">
+            Отправить форму
+          </button>
+          <span className="form__submit-error">
+            Упс, что-то пошло не так и форма не отправилась, попробуйте ещё раз!
+          </span>
+        </form>
       </section>
     </main>
   );
