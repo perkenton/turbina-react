@@ -1,5 +1,8 @@
 .player__button_stop {
   background-image: url('../../../../images/player/stop-button.svg');
+  transition: .3s linear;
+  grid-row: 1/2;
+  grid-column: 2/3;
 }
 
 .player__button_stop:hover {

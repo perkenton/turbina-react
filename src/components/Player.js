@@ -4,14 +4,12 @@ import throttle from "../utils/throttle";
 import playlist from "../constants/playlist";
 import PlayerTimebar from "./PlayerTimebar";
 import PlaylistItem from "./PlaylistItem";
+import PlayButton from "./svgComponents/player/PlayButton";
 
 const Player = () => {
   const [currentSong, setCurrentSong] = useState(playlist[0]);
-  // currentTime setCurrentTime
   const [currentTime, setCurrentTIme] = useState(0);
-  // duration setDuration
   const [duration, setDuration] = useState(0);
-  // isPlaying
   const [isPlaying, setIsPlaying] = useState(false);
 
   const myAudio = useRef(null);
@@ -19,14 +17,6 @@ const Player = () => {
   const onTimeUpdate = throttle((e) => {
     setCurrentTIme(e.target.currentTime);
   }, 1000);
-
-  const onPlay = (e) => {
-    setDuration(e.target.duration);
-  }
-
-  const onPause = (e) => {
-    console.log('pause')
-  }
 
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
@@ -38,56 +28,42 @@ const Player = () => {
 
   return (
     <div className="header__player-block player">
-      <div className="player__controller">
-        <button className={`player__button player__button_${isPlaying ? 'stop' : 'play'}`} 
-          onClick={_ => {
-            if (isPlaying) {
-              myAudio.current.pause();
-              setIsPlaying(true);
-            } else {
-              myAudio.current.play();
-              setIsPlaying(true);
-            }
-          }}
-        ></button>
-        <div className="player__song-container">
-          <div className="player__current-song">
-            <p className="player__song-title">
-              {currentSong.title} — {currentSong.author}{" "}
-              <span style={{ fontStyle: "italic" }}>feat.</span> {currentSong.artist}
-            </p>
-          </div>
-          <p className="player__song-duration">
-            { `${formatTime(currentTime)}/${formatTime(duration)}` }
+      
+      <div className="player__album"></div>
+      <button className={`player__button player__button_${isPlaying ? 'stop' : 'play'}`} 
+        onClick={_ => {
+          if (isPlaying) {
+            myAudio.current.pause();
+            setIsPlaying(false);
+          } else {
+            myAudio.current.play();
+            setIsPlaying(true);
+          }
+        }}
+      ></button>
+      <div className="player__song-container">
+        <div className="player__current-song">
+          <p className="player__song-title">
+            {currentSong.title} — {currentSong.author}{" "}
+            <span style={{ fontStyle: "italic" }}>feat.</span> {currentSong.artist}
           </p>
-          <PlayerTimebar
-            duration={duration}
-            currentTime={currentTime}
-            onClick={time => {
-              myAudio.current.currentTime = time;
-            }}
-          />
         </div>
-        <button className="player__button player__button_toggle">Релизы</button>
-        <button className="player__button player__button_dropout"></button>
-        <audio
-          ref={myAudio}
-          className="audio"
-          src={currentSong.audioFile}
-          controls
-          onTimeUpdate={onTimeUpdate}
-          onLoadedData={() => {
-            setDuration(myAudio.current.duration)
+        <p className="player__song-duration">
+          {currentTime === 0 ? formatTime(duration) : formatTime(currentTime)}
+        </p>
+        <PlayerTimebar
+          duration={duration}
+          currentTime={currentTime}
+          onClick={time => {
+            myAudio.current.currentTime = time;
           }}
-          onPlay={onPlay}
-          onPause={onPause}
-        >
-          audio not supported
-        </audio>
+        />
       </div>
+      <button className="player__button player__button_clip"><PlayButton />Клипы</button>
+      <button className="player__button player__button_toggle">Релизы</button>
+      <button className="player__button player__button_dropout"></button>
       <div className="player__content-container">
-        <h2 className="player__content-title">Релизы:</h2>
-
+      <h2 className="player__content-title">Релизы:</h2>
         <ul className="player__playlist">
           {playlist.map((item) => (
             <PlaylistItem
@@ -103,6 +79,19 @@ const Player = () => {
           ))}
         </ul>
       </div>
+      <audio
+        ref={myAudio}
+        className="player__audio"
+        src={currentSong.audioFile}
+        controls
+        onTimeUpdate={onTimeUpdate}
+        onLoadedData={() => {
+          setDuration(myAudio.current.duration)
+        }}
+      >
+        audio not supported
+      </audio>
+      
       {/* <div className="player__content-container">
                 <h2 className="player__content-title">Текст песни:</h2>
                 <p className="player__song-text">

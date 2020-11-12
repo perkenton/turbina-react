@@ -4,8 +4,8 @@
 @import url("./__button/_play/player__button_play.css");
 @import url("./__button/_stop/player__button_stop.css");
 @import url("./__button/_toggle.css/player__button_toggle.css");
+@import url("./__button/_clip/player__button_clip.css");
 
-@import url("./__controller/player__controller.css");
 @import url("./__content-container/player__content-container.css");
 @import url("./__content-title/player__content-title.css");
 @import url("./__current-song/player__current-song.css");
@@ -14,21 +14,17 @@
 @import url("./__timebar/player__timebar.css");
 @import url("./__timebar-progress/player__timebar-progress.css");
 
+@import url("./__audio/player__audio.css");
 @import url("./__song/player__song.css");
+@import url("./__album/player__album.css");
 @import url("./__song-container/player__song-container.css");
 @import url("./__song-duration/player__song-duration.css");
-@import url("./__song-link/player__song-link.css");
 @import url("./__song-text/player__song-text.css");
 @import url("./__song-title/player__song-title.css");
 
-.audio {
-  display: none;
-}
-
-
-
-
-
 .player {
-
+  display: grid;
+  align-items: center;
+  justify-items: stretch;
+  margin-bottom: 25px;
 }

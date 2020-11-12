@@ -4,8 +4,9 @@
   max-height: 104px;
   margin: 0 auto 30px auto;
   padding-top: 10px;
-  padding-left: 2px;
   overflow: auto;
+  grid-row: 2/3;
+  grid-column: 3/6;
 }
 
 /* width */
@@ -23,6 +24,13 @@
 /* Handle on hover */
 .player__content-container::-webkit-scrollbar-thumb:hover {
   background: #fff;
+}
+
+@media (max-width: 768px) {
+  .player__content-container {
+    padding-top: 8px;
+    margin: 0 auto 0 30px;
+  }
 }
 
 @media (max-width: 500px) {
