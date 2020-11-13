@@ -37,6 +37,10 @@
   transition: opacity 0.3s linear;
 }
 
+.form__input + .form__input-error {
+  transform: scaleY(1);
+}
+
 @media (max-width: 425px) {
   .form__input {
     font-size: 14px;

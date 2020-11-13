@@ -2,7 +2,7 @@ import React from "react";
 import { useField } from "formik";
 
 
-const TextArea = ({ className, ...props }) => {
+const TextArea = ({ className, errorClassName, ...props }) => {
   const [field, meta] = useField(props);
   
   return (
@@ -13,9 +13,9 @@ const TextArea = ({ className, ...props }) => {
         {...props} 
       />
       {meta.touched && meta.error ? (
-        <span className="form__input-error">{meta.error}</span>
+        <span className={errorClassName}>{meta.error}</span>
       ) : (
-        <span className="form__input-error_hidden"></span>
+        <span className={`${errorClassName}_hidden`}></span>
       )}
     </>
   );

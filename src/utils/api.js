@@ -18,7 +18,7 @@ class Api {
       // Код для демонстрации выполнения асинхронного запроса при сабмите
       return new Promise(resolve => setTimeout(() => {
         const result = Math.random() >= 0.5;
-        alert("Форма отправлена " + (result ? "неуспешно" : "успешно"));
+        console.log("Форма отправлена " + (result ? "успешно" : "неуспешно"));
 
         resolve(result);
       }, 2000))
