@@ -1,0 +1,31 @@
+.player__album {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border-radius: 4px;
+
+  max-width: 176px;
+  max-height: 176px;
+
+  grid-area: player__album;
+
+  transition: .3s linear;
+}
+
+@media (max-width: 1024px) {
+  .player__album {
+    width: 164px;
+    height: 164px;
+  }
+}
+
+@media (max-width: 768px) {
+  .player__album {
+    margin: 0 0 20px 38px;
+    width: 112px;
+    height: 112px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}

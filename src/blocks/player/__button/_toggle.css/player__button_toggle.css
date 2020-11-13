@@ -5,14 +5,17 @@
   line-height: 19px;
   font-style: normal;
   text-align: center;
-  color: white;
+  color: #FFF;
   min-width: 135px;
   height: 35px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #FFF;
   border-radius: 30px;
-  margin: 0 20px 0 0;
   box-sizing: border-box;
   transition: .3s linear;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: auto;
+  margin-right: 0;
 }
 
 .player__button_toggle:hover {

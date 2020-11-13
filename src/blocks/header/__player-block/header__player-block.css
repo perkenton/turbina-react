@@ -1,5 +1,11 @@
-.header__player-block {
-  margin: 0 auto;
-  max-width: 1233px;
-  width: calc(100% - 28px);
-}
+/*.header__player-block {*/
+/*  margin: 0 auto;*/
+/*  max-width: 1233px;*/
+/*  width: calc(100% - 50px);*/
+/*}*/
+
+/*@media (max-width: 768px) {*/
+/*  .header__player-block {*/
+/*    width: calc(100% - 28px);*/
+/*  }*/
+/*}*/

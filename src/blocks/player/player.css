@@ -1,33 +1,53 @@
 @import url("./__button/player__button.css");
-@import url("./__button/_dropout/player__button_dropout.css");
-@import url("./__button/_hidden/player__button_hidden.css");
+@import url("./__button/_dropout-open/player__button_dropout-open.css");
+@import url("./__button/_dropout-close/player__button_dropout-close.css");
 @import url("./__button/_play/player__button_play.css");
 @import url("./__button/_stop/player__button_stop.css");
 @import url("./__button/_toggle.css/player__button_toggle.css");
+@import url("./__button/_clip/player__button_clip.css");
+@import url("./__button-link/playey__button-link.css");
+@import url("./__buttons-block/player__buttons-block.css");
 
-@import url("./__container/player__container.css");
 @import url("./__content-container/player__content-container.css");
 @import url("./__content-title/player__content-title.css");
 @import url("./__current-song/player__current-song.css");
 @import url("./__playlist/player__playlist.css");
 
-@import url("./__progress-bar/player__progress-bar.css");
-@import url("./__progress-bar-bg/player__progress-bar-bg.css");
-@import url("./__progress-bar-progress/player__progress-bar-progress.css");
+@import url("./__timebar/player__timebar.css");
+@import url("./__timebar-progress/player__timebar-progress.css");
 
+@import url("./__audio/player__audio.css");
 @import url("./__song/player__song.css");
+@import url("./__album/player__album.css");
 @import url("./__song-container/player__song-container.css");
 @import url("./__song-duration/player__song-duration.css");
-@import url("./__song-link/player__song-link.css");
+@import url("./__song-feat/player__song-feat.css");
 @import url("./__song-text/player__song-text.css");
 @import url("./__song-title/player__song-title.css");
-
-
-
-
-
-
+@import url("./__element-hidden/player__element-hidden.css");
 
 .player {
+  max-width: 1233px;
+  width: calc(100% - 50px);
 
+  display: grid;
+  grid-template-columns: 176px 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "player__album player__song-container"
+    "player__album player__content-container";
+
+  margin-top: 0;
+  margin-bottom: 11px;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: .3s linear;
+}
+
+@media (max-width: 768px) {
+  .player {
+    width: calc(100% - 28px);
+  }
 }
