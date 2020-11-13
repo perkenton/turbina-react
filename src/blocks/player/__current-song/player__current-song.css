@@ -1,6 +1,9 @@
 .player__current-song {
-  display: flex;
-  padding: 13px 0;
-  justify-content: space-between;
   overflow: hidden;
+
+  display: grid;
+  grid-template-areas:
+        "player__song-title player__song-duration"
+        "player__timebar player__timebar";
+  
 }

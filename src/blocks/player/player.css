@@ -6,6 +6,7 @@
 @import url("./__button/_toggle.css/player__button_toggle.css");
 @import url("./__button/_clip/player__button_clip.css");
 @import url("./__button-link/playey__button-link.css");
+@import url("./__buttons-block/player__buttons-block.css");
 
 @import url("./__content-container/player__content-container.css");
 @import url("./__content-title/player__content-title.css");
@@ -20,12 +21,32 @@
 @import url("./__album/player__album.css");
 @import url("./__song-container/player__song-container.css");
 @import url("./__song-duration/player__song-duration.css");
+@import url("./__song-feat/player__song-feat.css");
 @import url("./__song-text/player__song-text.css");
 @import url("./__song-title/player__song-title.css");
 
 .player {
+  max-width: 1233px;
+  width: calc(100% - 50px);
+
   display: grid;
-  align-items: center;
-  justify-items: stretch;
-  margin-bottom: 25px;
+  grid-template-columns: 176px 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "player__album player__song-container"
+    "player__album player__content-container";
+
+  margin-top: 0;
+  margin-bottom: 11px;
+  margin-left: auto;
+  margin-right: auto;
+
+  transition: .3s linear;
+}
+
+@media (max-width: 768px) {
+  .player {
+    width: calc(100% - 28px);
+  }
 }

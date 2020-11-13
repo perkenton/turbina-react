@@ -42,48 +42,56 @@ const Player = () => {
       <div
         className="player__album"
         style={{ backgroundImage: `url(${currentSong.albumImage})` }}
-      ></div>
-      <button
-        className={`player__button player__button_${isPlaying ? "stop" : "play"}`}
-        onClick={checkSongStatus}
-      ></button>
+      />
+
       <div className="player__song-container">
+
+        <button
+          className={`player__button player__button_${isPlaying ? "stop" : "play"}`}
+          onClick={checkSongStatus}
+        />
+
         <div className="player__current-song">
           <p className="player__song-title">
             {currentSong.title} — {currentSong.author}
-            <span style={{ fontStyle: "italic" }}> feat.</span> {currentSong.artist}
+            <span className="player__song-feat"> feat.</span> {currentSong.artist}
           </p>
+          <p className="player__song-duration">
+            {currentTime === 0 ? formatTime(duration) : formatTime(currentTime)}
+          </p>
+          <PlayerTimebar
+            duration={duration}
+            currentTime={currentTime}
+            onClick={(time) => {
+              myAudio.current.currentTime = time;
+            }}
+          />
         </div>
-        <p className="player__song-duration">
-          {currentTime === 0 ? formatTime(duration) : formatTime(currentTime)}
-        </p>
-        <PlayerTimebar
-          duration={duration}
-          currentTime={currentTime}
-          onClick={(time) => {
-            myAudio.current.currentTime = time;
-          }}
-        />
+
+        <div className="player__buttons-block">
+          <button
+            className={`player__button player__button_clip ${
+              !currentSong.clip ? "" : ""
+            }`}
+          >
+            <a className="" href={currentSong.clip} target="_blank" rel="noreferrer">
+
+
+            </a>
+          </button>
+          <button
+            className="player__button player__button_toggle"
+            onClick={() => {
+              setToggleState(!toggleState);
+            }}
+          >
+            {toggleState ? "Релизы" : "Текст песни"}
+          </button>
+        </div>
+
+        <button className="player__button player__button_dropout" />
       </div>
-      <button
-        className={`player__button player__button_clip ${
-          !currentSong.clip ? "player__button_hidden" : ""
-        }`}
-      >
-        <a className="player__button-link" href={currentSong.clip} target="_blank" rel="noreferrer">
-          <PlayButton />
-          Клип
-        </a>
-      </button>
-      <button
-        className="player__button player__button_toggle"
-        onClick={() => {
-          setToggleState(!toggleState);
-        }}
-      >
-        {toggleState ? "Релизы" : "Текст песни"}
-      </button>
-      <button className="player__button player__button_dropout"></button>
+
       <div className="player__content-container">
         <h2 className="player__content-title ">{toggleState ? "Текст песни:" : "Релизы:"}</h2>
         {toggleState ? (

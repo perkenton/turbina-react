@@ -1,21 +1,14 @@
 .player__song-container {
-  max-width: 100%;
-  width: calc(100% - 40px);
+  width: 100%;
 
-  margin-top: 0;
+  margin-top: 6px;
   margin-bottom: 0;
-  margin-left: 20px;
-  margin-right: 20px;
-  grid-row: 1/2;
-  grid-column: 3/4;
 
   display: grid;
-  grid-template-columns: minmax(192px, max-content) 1fr;
-  grid-template-rows: 1fr 3px;
+  grid-template-columns: 61px 1fr minmax(175px, max-content) 24px;
   gap: 0px 0px;
-  grid-template-areas:
-    "player__current-song player__song-duration"
-    "progress-bar progress-bar";
+  grid-area: player__song-container;
+  align-items: baseline;
 }
 
 @media (max-width: 500px) {
