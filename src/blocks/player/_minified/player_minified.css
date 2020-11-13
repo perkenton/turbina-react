@@ -1,0 +1,7 @@
+.player_minified {
+  grid-template-columns: 0 1fr;
+  /*grid-template-areas: "player__song-container";*/
+  bottom: -141px;
+
+  transition: 1s linear;
+}

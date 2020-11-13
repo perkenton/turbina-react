@@ -18,6 +18,10 @@
   transform: scale(1.2);
 }
 
+.player__button_dropout-open:active {
+  transform: scale(1);
+}
+
 @media (max-width: 500px) {
   .player__button_dropout-open {
     min-width: 16px;

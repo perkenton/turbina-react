@@ -1,0 +1,26 @@
+.player_extended {
+  max-width: 1233px;
+  width: calc(100% - 50px);
+
+  display: grid;
+  grid-template-columns: minmax(0, 176px) 1fr; /*176px 1fr;*/
+  grid-template-rows: auto 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "player__album player__song-container"
+    "player__album player__content-container";
+
+  margin-top: 0;
+  margin-bottom: 11px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+
+  transition: 1s linear;
+}
+
+@media (max-width: 768px) {
+  .player_extended {
+    width: calc(100% - 28px);
+  }
+}

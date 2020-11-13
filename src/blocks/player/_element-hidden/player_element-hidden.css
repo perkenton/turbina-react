@@ -1,0 +1,9 @@
+.player_element-hidden {
+  /*display: none;*/
+  /*position: absolute;*/
+  /*transform: scaleY(0);*/
+  /*transform: scaleY(0) translateY(100%);*/
+  /*visibility: hidden;*/
+
+  transition: 1s linear;
+}

@@ -38,9 +38,9 @@ const Player = () => {
   };
 
   return (
-    <div className="header__player-block player">
+    <div className={`player player_extended ${isHidden ? "player_minified" : ""}`}>
       <div
-        className={`player__album ${isHidden ? "player__element-hidden" : ""}`}
+        className={`player__album ${isHidden ? "player_element-hidden" : ""}`}
         style={{ backgroundImage: `url(${currentSong.albumImage})` }}
       />
 
@@ -97,7 +97,7 @@ const Player = () => {
         />
       </div>
 
-      <div className={`player__content-container ${isHidden ? "player__element-hidden" : ""}`}>
+      <div className={`player__content-container ${isHidden ? "player_element-hidden" : ""}`}>
         <h2 className="player__content-title ">{toggleState ? "Текст песни:" : "Релизы:"}</h2>
         {toggleState ? (
           <SongText text={currentSong.songText} />
