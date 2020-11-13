@@ -3,17 +3,24 @@ import PlaylistItem from "./PlaylistItem";
 
 const Playlist = ({ playlist, loadSong }) => {
   return (
-    <ul className="player__playlist">
-      {playlist.map((item) => (
-        <PlaylistItem
-          key={item.id}
-          item={item}
-          onClick={(item) => {
-            loadSong(item)
-          }}
-        />
-      ))}
-    </ul>
+    playlist.length <= 1 ?
+    <h2 className="player__content-title ">Пока что у нас только 1 релиз.</h2>
+    : (
+      <>
+        <h2 className="player__content-title ">Релизы:</h2>
+        <ul className="player__playlist">
+        {playlist.map((item) => (
+          <PlaylistItem
+            key={item.id}
+            item={item}
+            onClick={(item) => {
+              loadSong(item)
+            }}
+          />
+        ))}
+        </ul>
+      </>
+    )
   );
 };
 

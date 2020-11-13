@@ -24,30 +24,10 @@
 @import url("./__song-feat/player__song-feat.css");
 @import url("./__song-text/player__song-text.css");
 @import url("./__song-title/player__song-title.css");
-@import url("./__element-hidden/player__element-hidden.css");
+@import url("./_element-hidden/player_element-hidden.css");
+@import url("./_extended/player_extended.css");
+@import url("./_minified/player_minified.css");
 
 .player {
-  max-width: 1233px;
-  width: calc(100% - 50px);
-
-  display: grid;
-  grid-template-columns: 176px 1fr;
-  grid-template-rows: auto 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "player__album player__song-container"
-    "player__album player__content-container";
-
-  margin-top: 0;
-  margin-bottom: 11px;
-  margin-left: auto;
-  margin-right: auto;
-
-  transition: .3s linear;
-}
-
-@media (max-width: 768px) {
-  .player {
-    width: calc(100% - 28px);
-  }
+  position: relative;
 }

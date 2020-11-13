@@ -4,23 +4,39 @@
 
   background-image: url('../../../../images/player/clip-button.svg');
 
-  /*border: 2px solid #FFFFFF;*/
-  /*color: #000;*/
-  /*background-color: #fff;*/
-  /*border-radius: 30px;*/
-  /*box-sizing: border-box;*/
-  transition: .3s linear;
-
   margin-right: 12px;
+
+  position: relative;
+  transition: .3s linear;
+}
+
+.player__button_clip::before {
+  content: '';
+  width: 94px;
+  height: 35px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  border: 2px solid #fff;
+  border-radius: 30px;
+  box-sizing: border-box;
 }
 
 .player__button_clip:hover {
-  transform: scale(1.2);
+  /*filter: opacity(50%);*/
+  opacity: .7;
+}
+
+.player__button_clip:hover::before {
+  /*border: 2px solid #000;*/
+  opacity: 1;
 }
 
 .player__button_clip:focus {
   outline: none;
-  transform: scale(1.2);
+  opacity: .7;
 }
 
 @media (max-width: 500px) {

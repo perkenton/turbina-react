@@ -11,6 +11,12 @@
   align-items: baseline;
 }
 
+@media (max-width: 768px) {
+  .player__song-container {
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 500px) {
   .player__song-container {
     margin: 0;
