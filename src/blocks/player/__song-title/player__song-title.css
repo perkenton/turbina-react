@@ -19,7 +19,12 @@
 
   margin: 0;
   padding-right: 12px;
+
   white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  grid-area: player__song-title;
 
   transition: .3s linear;
 }

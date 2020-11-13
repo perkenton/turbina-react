@@ -1,11 +1,12 @@
 @import url("./__button/player__button.css");
-@import url("./__button/_dropout/player__button_dropout.css");
-@import url("./__button/_hidden/player__button_hidden.css");
+@import url("./__button/_dropout-open/player__button_dropout-open.css");
+@import url("./__button/_dropout-close/player__button_dropout-close.css");
 @import url("./__button/_play/player__button_play.css");
 @import url("./__button/_stop/player__button_stop.css");
 @import url("./__button/_toggle.css/player__button_toggle.css");
 @import url("./__button/_clip/player__button_clip.css");
 @import url("./__button-link/playey__button-link.css");
+@import url("./__buttons-block/player__buttons-block.css");
 
 @import url("./__content-container/player__content-container.css");
 @import url("./__content-title/player__content-title.css");
@@ -20,12 +21,13 @@
 @import url("./__album/player__album.css");
 @import url("./__song-container/player__song-container.css");
 @import url("./__song-duration/player__song-duration.css");
+@import url("./__song-feat/player__song-feat.css");
 @import url("./__song-text/player__song-text.css");
 @import url("./__song-title/player__song-title.css");
+@import url("./_element-hidden/player_element-hidden.css");
+@import url("./_extended/player_extended.css");
+@import url("./_minified/player_minified.css");
 
 .player {
-  display: grid;
-  align-items: center;
-  justify-items: stretch;
-  margin-bottom: 25px;
+  position: relative;
 }

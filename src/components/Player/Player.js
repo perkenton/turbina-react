@@ -5,7 +5,6 @@ import playlist from "../../constants/playlist";
 import Playlist from "./Playlist";
 import SongText from "./SongText";
 import PlayerTimebar from "./PlayerTimebar";
-import PlayButton from "../svgComponents/player/PlayButton";
 
 const Player = () => {
   const [currentSong, setCurrentSong] = useState(playlist[0]);
@@ -13,6 +12,7 @@ const Player = () => {
   const [duration, setDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [toggleState, setToggleState] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
 
   const myAudio = useRef(null);
 
@@ -38,60 +38,73 @@ const Player = () => {
   };
 
   return (
-    <div className="header__player-block player">
+    <div className={`player player_extended ${isHidden ? "player_minified" : ""}`}>
       <div
-        className="player__album"
+        className={`player__album ${isHidden ? "player_element-hidden" : ""}`}
         style={{ backgroundImage: `url(${currentSong.albumImage})` }}
-      ></div>
-      <button
-        className={`player__button player__button_${isPlaying ? "stop" : "play"}`}
-        onClick={checkSongStatus}
-      ></button>
+      />
+
       <div className="player__song-container">
+
+        <button
+          className={`player__button player__button_${isPlaying ? "stop" : "play"}`}
+          onClick={checkSongStatus}
+        />
+
         <div className="player__current-song">
           <p className="player__song-title">
             {currentSong.title} — {currentSong.author}
-            <span style={{ fontStyle: "italic" }}> feat.</span> {currentSong.artist}
+            <span className="player__song-feat"> feat.</span> {currentSong.artist}
           </p>
+          <p className="player__song-duration">
+            {currentTime === 0 ? formatTime(duration) : formatTime(currentTime)}
+          </p>
+          <PlayerTimebar
+            duration={duration}
+            currentTime={currentTime}
+            onClick={(time) => {
+              myAudio.current.currentTime = time;
+            }}
+          />
         </div>
-        <p className="player__song-duration">
-          {currentTime === 0 ? formatTime(duration) : formatTime(currentTime)}
-        </p>
-        <PlayerTimebar
-          duration={duration}
-          currentTime={currentTime}
-          onClick={(time) => {
-            myAudio.current.currentTime = time;
+
+        <div className="player__buttons-block">
+          <button
+            className={`player__button player__button_clip ${
+              !currentSong.clip ? "" : ""
+            }`}
+          >
+            <a className="" href={currentSong.clip} target="_blank" rel="noreferrer">
+
+
+            </a>
+          </button>
+          <button
+            className="player__button player__button_toggle"
+            onClick={() => {
+              setToggleState(!toggleState);
+            }}
+          >
+            {toggleState ? "Релизы" : "Текст песни"}
+          </button>
+        </div>
+
+        <button 
+          className={`player__button player__button_dropout-${isHidden ? "open" : "close"}`}
+          onClick={() => {
+            setIsHidden(!isHidden);
           }}
         />
       </div>
-      <button
-        className={`player__button player__button_clip ${
-          !currentSong.clip ? "player__button_hidden" : ""
-        }`}
-      >
-        <a className="player__button-link" href={currentSong.clip} target="_blank" rel="noreferrer">
-          <PlayButton />
-          Клип
-        </a>
-      </button>
-      <button
-        className="player__button player__button_toggle"
-        onClick={() => {
-          setToggleState(!toggleState);
-        }}
-      >
-        {toggleState ? "Релизы" : "Текст песни"}
-      </button>
-      <button className="player__button player__button_dropout"></button>
-      <div className="player__content-container">
-        <h2 className="player__content-title ">{toggleState ? "Текст песни:" : "Релизы:"}</h2>
+
+      <div className={`player__content-container ${isHidden ? "" : ""}`}>
         {toggleState ? (
           <SongText text={currentSong.songText} />
         ) : (
           <Playlist playlist={playlist} loadSong={loadSong} />
         )}
       </div>
+
       <audio
         ref={myAudio}
         className="player__audio"
