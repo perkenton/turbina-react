@@ -1,5 +1,5 @@
 /node_modules
-/dist
+/build
 .idea
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,webstorm,vscode,git

@@ -1,6 +1,11 @@
 .player__button_play {
   background-image: url('../../../../images/player/play-button.svg');
   transition: .3s linear;
+
+  margin-top: 3px;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .player__button_play:hover {

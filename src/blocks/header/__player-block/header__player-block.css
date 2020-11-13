@@ -1,7 +1,0 @@
-.header__player-block {
-  margin: 0 auto;
-  max-width: 1233px;
-  width: calc(100% - 28px);
-
-  z-index: 10;
-}

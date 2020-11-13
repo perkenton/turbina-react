@@ -1,0 +1,23 @@
+.player_minified {
+  bottom: -131px;
+
+  transition: .5s linear;
+}
+
+@media (max-width: 1024px) {
+  .player_minified {
+    bottom: -145px;
+  }
+}
+
+@media (max-width: 768px) {
+  .player_minified {
+    bottom: -130px;
+  }
+}
+
+@media (max-width: 425px) {
+  .player_minified {
+
+  }
+}

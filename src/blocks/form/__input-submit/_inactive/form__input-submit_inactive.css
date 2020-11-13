@@ -1,0 +1,8 @@
+.form__input-submit_inactive {
+  background-color: #fff;
+}
+
+.form__input-submit_inactive:hover {
+  background-color: #fff;
+  color: #000;
+}
