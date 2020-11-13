@@ -23,8 +23,8 @@
   .player_extended {
     width: calc(100% - 28px);
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: auto;
     grid-template-areas:
     "player__song-container player__song-container"
     "player__album player__content-container";

@@ -30,8 +30,8 @@
   .player__album {
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 20px;
-    margin-right: 60px;
+    margin-left: 60px;
+    margin-right: 0;
     width: 112px;
     height: 112px;
   }

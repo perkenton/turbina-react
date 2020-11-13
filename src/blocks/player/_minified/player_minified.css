@@ -4,13 +4,20 @@
   transition: .5s linear;
 }
 
-/*@media (max-width: 768px) {*/
-/*  .player_minified {*/
-/*    grid-template-columns: auto 1fr;*/
-/*    grid-template-rows: auto 1fr;*/
-/*    gap: 0px 0px;*/
-/*    grid-template-areas:*/
-/*    "player__album player__song-container"*/
-/*    "player__album player__content-container";*/
-/*  }*/
-/*}*/
+@media (max-width: 1024px) {
+  .player_minified {
+    bottom: -145px;
+  }
+}
+
+@media (max-width: 768px) {
+  .player_minified {
+    bottom: -130px;
+  }
+}
+
+@media (max-width: 425px) {
+  .player_minified {
+
+  }
+}
