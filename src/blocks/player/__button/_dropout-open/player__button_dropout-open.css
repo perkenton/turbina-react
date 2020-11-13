@@ -1,0 +1,26 @@
+.player__button_dropout-open {
+  height: 24px;
+  min-width: 24px;
+  background-image: url('../../../../images/player/open-button.svg');
+  transition: .3s linear;
+  margin-top: 0;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.player__button_dropout-open:hover {
+  transform: scale(1.2);
+}
+
+.player__button_dropout-open:focus {
+  outline: none;
+  transform: scale(1.2);
+}
+
+@media (max-width: 500px) {
+  .player__button_dropout-open {
+    min-width: 16px;
+    height: 16px;
+  }
+}

@@ -5,7 +5,6 @@ import playlist from "../../constants/playlist";
 import Playlist from "./Playlist";
 import SongText from "./SongText";
 import PlayerTimebar from "./PlayerTimebar";
-import PlayButton from "../svgComponents/player/PlayButton";
 
 const Player = () => {
   const [currentSong, setCurrentSong] = useState(playlist[0]);
@@ -13,6 +12,7 @@ const Player = () => {
   const [duration, setDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [toggleState, setToggleState] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
 
   const myAudio = useRef(null);
 
@@ -40,7 +40,7 @@ const Player = () => {
   return (
     <div className="header__player-block player">
       <div
-        className="player__album"
+        className={`player__album ${isHidden ? "player__element-hidden" : ""}`}
         style={{ backgroundImage: `url(${currentSong.albumImage})` }}
       />
 
@@ -89,10 +89,15 @@ const Player = () => {
           </button>
         </div>
 
-        <button className="player__button player__button_dropout" />
+        <button 
+          className={`player__button player__button_dropout-${isHidden ? "open" : "close"}`}
+          onClick={() => {
+            setIsHidden(!isHidden);
+          }}
+        />
       </div>
 
-      <div className="player__content-container">
+      <div className={`player__content-container ${isHidden ? "player__element-hidden" : ""}`}>
         <h2 className="player__content-title ">{toggleState ? "Текст песни:" : "Релизы:"}</h2>
         {toggleState ? (
           <SongText text={currentSong.songText} />
@@ -100,6 +105,7 @@ const Player = () => {
           <Playlist playlist={playlist} loadSong={loadSong} />
         )}
       </div>
+
       <audio
         ref={myAudio}
         className="player__audio"
