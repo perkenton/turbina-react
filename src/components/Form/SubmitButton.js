@@ -1,6 +1,6 @@
 import React from "react";
 
-const SubmitButton = ({ className, disabled, ...props }) => {
+const SubmitButton = ({ className, disabled, children, ...props }) => {
   return (
     <button 
       type="submit" 
@@ -8,7 +8,7 @@ const SubmitButton = ({ className, disabled, ...props }) => {
       disabled={disabled}
       {...props}
     >
-        Отправить
+        { children }
     </button>          
   );
 };

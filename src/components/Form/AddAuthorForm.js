@@ -10,7 +10,8 @@ import SubmitButton from "./SubmitButton";
 import api from './../../utils/api';
 
 const AddAuthorForm = () => {
-  const [incorrectRequest, setIncorrectRequest] = React.useState(false);
+  const [okResult, setOkResult] = React.useState(true);
+  const [isSend, setSend] = React.useState(false);
 
   return (
     <>
@@ -41,38 +42,43 @@ const AddAuthorForm = () => {
         })}
 
         onSubmit={async (values, { setSubmitting, resetForm }) => {
-          const hasError = await api.addAuthor(values); 
+          const isSuccessful = await api.addAuthor(values); 
 
-          setIncorrectRequest(hasError);                      
+          setOkResult(isSuccessful);                      
           setSubmitting(false);  
-          
-          if (!hasError) {resetForm();}
+
+          if (!isSend) setSend(true);          
+          if (isSuccessful) resetForm();
         }}
 
       >
-        {({ isSubmitting, errors, values }) => (
+        {({ isSubmitting, errors, values, touched }) => (
           <Form className="form">
             <TextInput
               type="text"
               name="author"
               className="form__input"
+              errorClassName="form__input-error"
               placeholder="Имя и фамилия автора"
             />
             <TextInput
               type="tel" 
               name="phone" 
               className="form__input" 
+              errorClassName="form__input-error"
               placeholder="Телефон"
             />
             <TextInput
               type="email"
               name="email"
               className="form__input"
+              errorClassName="form__input-error"
               placeholder="Почта"
             />
             <TextArea
               name="lyrics"
               className="form__textarea"
+              errorClassName="form__input-error"
               placeholder="Стихи"
             />
             <Checkbox 
@@ -90,10 +96,17 @@ const AddAuthorForm = () => {
               name="submit"
               className="form__input-submit"
               disabled={ isSubmitting | (Object.keys(errors).length > 0) | !values.acceptedTerms }
-            />             
-            {incorrectRequest ? (
-              <span className="form__submit-error">Упс, что-то пошло не так и форма не отправилась, попробуйте ещё раз!</span>
-            ) : <span className="form__submit-error_hidden"></span>}  
+            >
+              { isSubmitting 
+                ? <div className="form__spinner"></div> 
+                : isSend && okResult && (Object.keys(touched).length === 0) 
+                  ? "Форма отправлена" 
+                  : "Отправить форму"
+              }
+            </SubmitButton>             
+            { !isSubmitting && !okResult && <span className="form__submit-result form__submit-result_invalid">
+                Упс, что-то пошло не так и форма не отправилась, попробуйте ещё раз!
+              </span> }
           </Form>
         )}
       </Formik>
