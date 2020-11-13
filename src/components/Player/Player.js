@@ -97,7 +97,7 @@ const Player = () => {
         />
       </div>
 
-      <div className={`player__content-container ${isHidden ? "player_element-hidden" : ""}`}>
+      <div className={`player__content-container ${isHidden ? "" : ""}`}>
         <h2 className="player__content-title ">{toggleState ? "Текст песни:" : "Релизы:"}</h2>
         {toggleState ? (
           <SongText text={currentSong.songText} />

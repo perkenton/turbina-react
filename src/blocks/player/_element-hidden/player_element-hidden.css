@@ -4,6 +4,6 @@
   /*transform: scaleY(0);*/
   /*transform: scaleY(0) translateY(100%);*/
   /*visibility: hidden;*/
-
-  transition: 1s linear;
+  width: 0;
+  transition: .5s linear;
 }
