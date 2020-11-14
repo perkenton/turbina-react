@@ -1,6 +1,7 @@
 .player__button_clip {
   width: 94px;
   height: 35px;
+  border-radius: 30px;
 
   background-image: url('../../../../images/player/clip-button.svg');
 

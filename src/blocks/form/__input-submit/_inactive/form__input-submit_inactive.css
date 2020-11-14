@@ -1,5 +1,6 @@
 .form__input-submit_inactive {
   background-color: #fff;
+  cursor: default;
 }
 
 .form__input-submit_inactive:hover {
