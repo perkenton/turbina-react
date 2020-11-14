@@ -1,4 +1,6 @@
 .player_element-hidden {
   width: 0;
+  height: 0;
+  margin: 0;
   transition: .5s linear;
 }
