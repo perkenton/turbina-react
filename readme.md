@@ -18,4 +18,4 @@
 - Запустить сборку production-билда — `npm run build`
 - Разместить production-билд на github pages — `npm run deploy`
 
-[1]: http://perken.ru/turbina
+[1]: http://perken.ru/turbina-react/
