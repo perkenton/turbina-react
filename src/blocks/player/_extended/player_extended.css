@@ -16,7 +16,9 @@
   margin-right: auto;
   bottom: 0;
 
+  position: relative;
   transition: .5s linear;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -35,11 +37,19 @@
   .player_extended {
     width: calc(100% - 28px);
 
+    bottom: 100px;
+
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
     "player__song-container player__song-container"
     "player__album player__album"
     "player__content-container player__content-container";
+  }
+}
+
+@media (max-width: 500px) {
+  .player_extended {
+    bottom: 0;
   }
 }

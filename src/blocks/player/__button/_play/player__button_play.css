@@ -6,6 +6,8 @@
   margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
+
+  grid-area: player__button_play;
 }
 
 .player__button_play:hover {
@@ -15,4 +17,10 @@
 .player__button_play:focus {
   outline: none;
   transform: scale(1.2);
+}
+
+@media (max-width: 600px) {
+  .player__button_play {
+    margin-left: 0;
+  }
 }

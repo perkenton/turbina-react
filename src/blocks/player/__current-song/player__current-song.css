@@ -5,5 +5,11 @@
   grid-template-areas:
         "player__song-title player__song-duration"
         "player__timebar player__timebar";
-  
+  grid-area: player__current-song;
+}
+
+@media (max-width: 360px) {
+  .player__current-song {
+    grid-template-columns: 1fr 38px;
+  }
 }
