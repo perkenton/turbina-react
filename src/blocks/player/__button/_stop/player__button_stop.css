@@ -14,5 +14,4 @@
 
 .player__button_stop:focus {
   outline: none;
-  transform: scale(1.2);
 }
