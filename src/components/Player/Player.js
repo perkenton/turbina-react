@@ -38,7 +38,7 @@ const Player = () => {
   };
 
   return (
-    <div className={`player player_extended ${isHidden ? "player_minified" : ""}`}>
+    <div className={`player player_extended ${isHidden ? "player_minified" : "player_blur"}`}>
       <div
         className={`player__album ${isHidden ? "player_element-hidden" : ""}`}
         style={{ backgroundImage: `url(${currentSong.albumImage})` }}

@@ -1,5 +1,5 @@
 .player_minified {
-  bottom: -131px;
+  bottom: -144px;
 
   transition: .5s linear;
 }
@@ -16,8 +16,14 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
   .player_minified {
+    bottom: -336px;
+  }
+}
 
+@media (max-width: 500px) {
+  .player_minified {
+    bottom: -455px;
   }
 }
