@@ -1,29 +1,4 @@
 .player_minified {
-  /*bottom: -144px;*/
   grid-template-rows: 40px;
   transition: .5s linear;
-}
-
-@media (max-width: 1024px) {
-  .player_minified {
-    /*bottom: -145px;*/
-  }
-}
-
-@media (max-width: 768px) {
-  .player_minified {
-    /*bottom: -130px;*/
-  }
-}
-
-@media (max-width: 600px) {
-  .player_minified {
-    /*bottom: -336px;*/
-  }
-}
-
-@media (max-width: 500px) {
-  .player_minified {
-    /*bottom: -455px;*/
-  }
 }
