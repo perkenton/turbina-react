@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { use100vh } from 'react-div-100vh'
 import svgComponents from "./svgComponents/svgComponents";
 import Player from "./Player/Player";
@@ -9,9 +9,15 @@ import {
 } from '../constants/constants';
 
 function Header() {
+  const [isRotating, setRotating] = useState(false);
+
   function DesireHeaderHeight() {
     const height = use100vh();
     return (document.body.clientWidth > 768) ? height - 10 : height - 8;
+  }
+
+  function toggleRotation(shouldRotate) {
+    setRotating(shouldRotate);
   }
 
   return (
@@ -50,8 +56,10 @@ function Header() {
       <h1 className="header__title">
         <svgComponents.TurbinaLogo />
       </h1>
+      <div className= { isRotating ? "header__colored-ring header__colored-ring_rotating" : "header__colored-ring" }></div>
+      <div className= { isRotating ? "header__rotation header__rotation_rotating" : "header__rotation" }></div>      
 
-      <Player />
+      <Player toggleRotation = { toggleRotation }/>
     </header>
   );
 }

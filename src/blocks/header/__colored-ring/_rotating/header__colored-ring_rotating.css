@@ -1,0 +1,14 @@
+@keyframes rotate-backwards {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.header__colored-ring_rotating {
+  animation: rotate-backwards 10s linear infinite;  
+  opacity: 0.6;  
+}

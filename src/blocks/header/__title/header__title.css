@@ -4,6 +4,12 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 @media (max-width: 1024px) {
@@ -21,6 +27,6 @@
 @media (max-width: 500px) {
   .header__title {
     width: calc(100% - 48px);
-    margin-top: -123px;
+    /* margin-top: -123px; */
   }
 }
