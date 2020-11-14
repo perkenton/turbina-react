@@ -18,9 +18,10 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .player__content-title {
     font-size: 14px;
     line-height: 19px;
+    margin-top: 0;
   }
 }

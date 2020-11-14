@@ -24,6 +24,8 @@
 @import url("./__song-feat/player__song-feat.css");
 @import url("./__song-text/player__song-text.css");
 @import url("./__song-title/player__song-title.css");
+
+@import url("./_blur/player_blur.css");
 @import url("./_element-hidden/player_element-hidden.css");
 @import url("./_extended/player_extended.css");
 @import url("./_minified/player_minified.css");

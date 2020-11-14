@@ -10,4 +10,18 @@
   padding-bottom: 0;
   padding-left: 14px;
   padding-right: 18px;
+
+  grid-area: player__buttons-block;
+}
+
+@media (max-width: 600px) {
+  .player__buttons-block {
+    max-width: 240px;
+    width: 100%;
+
+    margin-top: 21px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

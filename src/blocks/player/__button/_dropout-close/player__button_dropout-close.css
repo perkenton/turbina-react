@@ -1,12 +1,17 @@
 .player__button_dropout-close {
   height: 24px;
   min-width: 24px;
+
   background-image: url('../../../../images/player/close-button.svg');
-  transition: .3s linear;
+
   margin-top: 0;
   margin-bottom: auto;
   margin-left: auto;
   margin-right: 0;
+
+  grid-area: player__button_dropout-close;
+
+  transition: .3s linear;
 }
 
 .player__button_dropout-close:hover {
@@ -22,8 +27,9 @@
   transform: scale(1);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .player__button_dropout-close {
+    margin-top: 2px;
     min-width: 16px;
     height: 16px;
   }

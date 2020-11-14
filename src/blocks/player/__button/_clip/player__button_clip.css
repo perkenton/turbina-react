@@ -10,28 +10,8 @@
   transition: .3s linear;
 }
 
-.player__button_clip::before {
-  content: '';
-  width: 94px;
-  height: 35px;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  border: 2px solid #fff;
-  border-radius: 30px;
-  box-sizing: border-box;
-}
-
 .player__button_clip:hover {
-  /*filter: opacity(50%);*/
   opacity: .7;
-}
-
-.player__button_clip:hover::before {
-  /*border: 2px solid #000;*/
-  opacity: 1;
 }
 
 .player__button_clip:focus {
@@ -39,9 +19,8 @@
   opacity: .7;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .player__button_clip {
-    min-width: 16px;
-    height: 16px;
+    width: 130px;
   }
 }
