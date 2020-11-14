@@ -6,7 +6,7 @@ import Playlist from "./Playlist";
 import SongText from "./SongText";
 import PlayerTimebar from "./PlayerTimebar";
 
-const Player = () => {
+const Player = ({ toggleRotation, ...props}) => {
   const [currentSong, setCurrentSong] = useState(playlist[0]);
   const [currentTime, setCurrentTIme] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -31,9 +31,11 @@ const Player = () => {
     if (isPlaying) {
       myAudio.current.pause();
       setIsPlaying(false);
+      toggleRotation(false);
     } else {
       myAudio.current.play();
       setIsPlaying(true);
+      toggleRotation(true);
     }
   };
 

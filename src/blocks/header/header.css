@@ -12,6 +12,10 @@
 @import url(./__mobile-submenu/header__mobile-submenu.css);
 @import url(./__title/header__title.css);
 @import url(./__top-wrapper/header__top-wrapper.css);
+@import url(./__rotation/header__rotation.css);
+@import url(./__rotation/_rotating/header__rotation_rotating.css);
+@import url(./__colored-ring/header__colored-ring.css);
+@import url(./__colored-ring/_rotating/header__colored-ring_rotating.css);
 
 .header {
   width: 100%;
@@ -22,6 +26,9 @@
   justify-content: space-between;
   align-items: center;
   transition: .6s linear;
+
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
