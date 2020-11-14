@@ -16,7 +16,6 @@
 
 .player__button_play:focus {
   outline: none;
-  transform: scale(1.2);
 }
 
 @media (max-width: 600px) {

@@ -11,12 +11,11 @@
 }
 
 .player__button_clip:hover {
-  opacity: .7;
+  background-color: #f44
 }
 
 .player__button_clip:focus {
   outline: none;
-  opacity: .7;
 }
 
 @media (max-width: 600px) {

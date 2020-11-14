@@ -15,7 +15,6 @@
 
 .player__button_dropout-open:focus {
   outline: none;
-  transform: scale(1.2);
 }
 
 .player__button_dropout-open:active {

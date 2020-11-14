@@ -16,6 +16,8 @@
 
 @media (max-width: 600px) {
   .player__buttons-block {
+    position: relative;
+    top: 260px;
     max-width: 240px;
     width: 100%;
 
