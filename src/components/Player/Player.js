@@ -25,6 +25,7 @@ const Player = ({ toggleRotation, ...props}) => {
     setCurrentTIme(0);
     setDuration(myAudio.current.duration);
     setIsPlaying(false);
+    toggleRotation(false);
   };
 
   const checkSongStatus = () => {
