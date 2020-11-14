@@ -15,3 +15,9 @@
 .player__button_stop:focus {
   outline: none;
 }
+
+@media (max-width: 600px) {
+  .player__button_stop {
+    margin-left: 0;
+  }
+}
