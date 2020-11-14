@@ -12,7 +12,7 @@ const Player = () => {
   const [duration, setDuration] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [toggleState, setToggleState] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
+  const [isHidden, setIsHidden] = useState(true);
 
   const myAudio = useRef(null);
 
@@ -69,16 +69,15 @@ const Player = () => {
         </div>
 
         <div className="player__buttons-block">
-          <button
+          <a 
             className={`player__button player__button_clip ${
-              !currentSong.clip ? "" : ""
-            }`}
-          >
-            <a className="" href={currentSong.clip} target="_blank" rel="noreferrer">
+              !currentSong.clip ? "player__button-hidden" : ""
+            }`} 
+                href={currentSong.clip} 
+                target="_blank" 
+                rel="noreferrer">
+          </a>
 
-
-            </a>
-          </button>
           <button
             className="player__button player__button_toggle"
             onClick={() => {

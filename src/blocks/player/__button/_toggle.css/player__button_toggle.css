@@ -29,12 +29,10 @@
 
 .player__button_toggle:focus {
   outline: none;
-  background-color: rgba(255, 255, 255, .4);
 }
 
 .player__button_toggle:active {
   font-size: 15px;
-  background-color: rgba(255, 255, 255, .7);
 }
 
 @media (max-width: 1024px) {
@@ -47,7 +45,6 @@
   }
   .player__button_toggle:active {
     font-size: 14px;
-    background-color: rgba(255, 255, 255, .7);
   }
 }
 
