@@ -10,10 +10,7 @@
     "player__album player__song-container"
     "player__album player__content-container";
 
-  margin-top: 0;
-  margin-bottom: 11px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 11px auto;
   bottom: 0;
 
   position: relative;

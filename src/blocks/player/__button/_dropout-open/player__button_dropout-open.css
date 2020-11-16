@@ -3,10 +3,8 @@
   min-width: 24px;
   background-image: url('../../../../images/player/open-button.svg');
   transition: .3s linear;
-  margin-top: 0;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: 0;
+
+  margin: 0 0 auto auto;
 }
 
 .player__button_dropout-open:hover {

@@ -3,13 +3,12 @@
   transition: .3s linear;
 }
 
-.header__logo-link:hover {
+.header__logo-link:hover, .header__logo-link:focus {
   transform: scale(1.1);
 }
 
 .header__logo-link:focus {
   outline: none;
-  transform: scale(1.1);
 }
 
 .header__logo-link:active {
