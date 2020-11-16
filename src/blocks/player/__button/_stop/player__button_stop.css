@@ -1,0 +1,19 @@
+.player__button_stop {
+  transition: .3s linear;
+
+  margin: 4px auto auto auto;
+}
+
+.player__button_stop:hover {
+  transform: scale(1.2);
+}
+
+.player__button_stop:focus {
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .player__button_stop {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,42 @@
+.player__song {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  text-decoration: none;
+
+  margin: 16px 0;
+  padding: 0;
+
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+.player__song:hover {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.player__song:focus {
+  outline: none;
+}
+
+.player__song:active {
+  color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 1024px) {
+  .player__song {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .player__song {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

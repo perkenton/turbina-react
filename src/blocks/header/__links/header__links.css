@@ -1,0 +1,20 @@
+.header__links {
+  list-style: none;
+  text-align: right;
+  padding: 0;
+  margin-top: 11px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 500px) {
+  .header__links {
+    transform: scaleY(0);
+    transform-origin: 100% 0;
+    transition: .3s linear;
+  }
+
+  .header__mobile-checkbox:checked ~ .header__mobile-label ~ .header__links {
+    margin-top: 11px;
+    transform: scaleY(1);
+  }
+}

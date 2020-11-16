@@ -1,0 +1,4 @@
+.player_minified {
+  grid-template-rows: 40px;
+  transition: .5s linear;
+}

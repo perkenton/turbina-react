@@ -1,0 +1,27 @@
+.header__mobile-cross {
+  height: min-content;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 25px;
+  line-height: 22px;
+  color: #fff;
+
+  border: 2px solid #fff;
+  border-radius: 50%;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0px 4px 3px;
+
+  transition: .3s ease-in;
+  transform: scaleY(0);
+}
+
+@media (max-width: 500px) {
+  .header__mobile-checkbox:checked ~ .header__mobile-label .header__mobile-cross {
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+}

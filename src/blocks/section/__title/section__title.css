@@ -1,0 +1,33 @@
+.section__title {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 61px;
+  text-transform: uppercase;
+  
+  color: #000000;
+
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .section__title {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 42px;
+    line-height: 51px;
+  }
+}
+
+@media (max-width: 425px) {
+  .section__title {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}

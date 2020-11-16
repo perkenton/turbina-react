@@ -1,0 +1,18 @@
+.player__button {
+  min-width: 18px;
+  height: 15px;
+  outline: none;
+  background: none no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .player__button {
+    min-width: 16px;
+    height: 13px;
+  }
+}

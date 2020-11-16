@@ -1,0 +1,15 @@
+.header__link-item {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1024px) {
+  .header__link-item {
+    margin-bottom: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header__link-item {
+    margin-bottom: 17px;
+  }
+}

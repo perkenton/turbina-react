@@ -1,0 +1,47 @@
+.player__album {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border-radius: 4px;
+
+  width: 176px;
+  height: 176px;
+
+  position: relative;
+  z-index: 1;
+
+  grid-area: player__album;
+
+  transform-origin: 0 100%;
+  transform: scaleY(1) translateY(0);
+  transition: .5s linear;
+}
+
+@media (max-width: 1024px) {
+  .player__album {
+    width: 164px;
+    height: 164px;
+  }
+}
+
+@media (max-width: 768px) {
+  .player__album {
+    width: 112px;
+    height: 112px;
+
+    margin: 0 0 0 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .player__album {
+    width: 240px;
+    height: 240px;
+
+    position: relative;
+    bottom: 50px;
+
+    margin: 0 auto 0 auto;
+  }
+}

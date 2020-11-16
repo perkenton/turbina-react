@@ -1,0 +1,26 @@
+.player__button_clip {
+  width: 94px;
+  height: 35px;
+  border-radius: 30px;
+
+  background-image: url('../../../../images/player/clip-button.svg');
+
+  margin-right: 12px;
+
+  position: relative;
+  transition: .3s linear;
+}
+
+.player__button_clip:hover {
+  background-color: #f44
+}
+
+.player__button_clip:focus {
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .player__button_clip {
+    width: 130px;
+  }
+}

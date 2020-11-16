@@ -1,0 +1,21 @@
+.player__button_play {
+  transition: .3s linear;
+
+  margin: 3px auto auto auto;
+
+  grid-area: player__button_play;
+}
+
+.player__button_play:hover {
+  transform: scale(1.2);
+}
+
+.player__button_play:focus {
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .player__button_play {
+    margin-left: 0;
+  }
+}

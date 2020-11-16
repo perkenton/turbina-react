@@ -1,0 +1,38 @@
+.player__song-container {
+  width: 100%;
+
+  margin-top: 6px;
+  margin-bottom: 0;
+
+  display: grid;
+  grid-template-columns: 61px 1fr minmax(175px, max-content) 24px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "player__button_play player__current-song player__buttons-block player__button_dropout-close";
+  grid-area: player__song-container;
+  align-items: baseline;
+
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .player__song-container {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .player__song-container {
+    grid-template-columns: 28px 1fr 30px;
+    grid-template-areas:
+    "player__button_play player__current-song player__button_dropout-close"
+    "player__buttons-block player__buttons-block player__buttons-block";
+  }
+}
+
+@media (max-width: 500px) {
+  .player__song-container {
+    width: 100%;
+  }
+}

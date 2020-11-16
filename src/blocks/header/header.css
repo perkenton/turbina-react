@@ -1,0 +1,38 @@
+  
+@import url(./__link/header__link.css);
+@import url(./__link-item/header__link-item.css);
+@import url(./__links/header__links.css);
+@import url(./__links-block/header__links-block.css);
+@import url(./__logo/header__logo.css);
+@import url(./__logo-link/header__logo-link.css);
+@import url(./__logo-title/header__logo-title.css);
+@import url(./__mobile-checkbox/header__mobile-checkbox.css);
+@import url(./__mobile-cross/header__mobile-cross.css);
+@import url(./__mobile-label/header__mobile-label.css);
+@import url(./__mobile-submenu/header__mobile-submenu.css);
+@import url(./__title/header__title.css);
+@import url(./__top-wrapper/header__top-wrapper.css);
+@import url(./__rotation/header__rotation.css);
+@import url(./__rotation/_rotating/header__rotation_rotating.css);
+@import url(./__colored-ring/header__colored-ring.css);
+@import url(./__colored-ring/_rotating/header__colored-ring_rotating.css);
+
+.header {
+  width: 100%;
+  min-height: calc(100vh - 10px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: .6s linear;
+
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .header {
+    min-height: calc(100vh - 8px);
+  }
+}
