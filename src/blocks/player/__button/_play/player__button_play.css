@@ -1,5 +1,4 @@
 .player__button_play {
-  background-image: url('../../../../images/player/play-button.svg');
   transition: .3s linear;
 
   margin-top: 3px;

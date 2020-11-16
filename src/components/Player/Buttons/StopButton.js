@@ -1,8 +1,8 @@
 import React from "react";
 
-function SvgStopButton(props) {
+function SvgStopButton({ onClick }) {
   return (
-    <svg width="1em" height="1em" viewBox="0 0 14 18" fill="none" {...props}>
+    <svg className="player__button player__button_stop" width="1em" height="1em" viewBox="0 0 14 18" fill="none" onClick={onClick}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

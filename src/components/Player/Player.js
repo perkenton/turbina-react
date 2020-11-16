@@ -5,8 +5,9 @@ import playlist from "../../constants/playlist";
 import Playlist from "./Playlist";
 import SongText from "./SongText";
 import PlayerTimebar from "./PlayerTimebar";
+import Buttons from "./Buttons/Buttons";
 
-const Player = ({ toggleRotation, ...props}) => {
+const Player = ({ toggleRotation }) => {
   const [currentSong, setCurrentSong] = useState(playlist[0]);
   const [currentTime, setCurrentTIme] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -49,11 +50,12 @@ const Player = ({ toggleRotation, ...props}) => {
 
       <div className="player__song-container">
 
-        <button
-          className={`player__button player__button_${isPlaying ? "stop" : "play"}`}
-          onClick={checkSongStatus}
-        />
-
+        {isPlaying ? (
+          <Buttons.StopButton onClick={checkSongStatus} />
+        ) : (
+          <Buttons.PlayButton onClick={checkSongStatus} />
+        )}
+        
         <div className="player__current-song">
           <p className="player__song-title">
             {currentSong.title} — {currentSong.author}
@@ -91,12 +93,19 @@ const Player = ({ toggleRotation, ...props}) => {
           </button>
         </div>
 
-        <button 
-          className={`player__button player__button_dropout-${isHidden ? "open" : "close"}`}
-          onClick={() => {
-            setIsHidden(!isHidden);
-          }}
-        />
+        {isHidden ? (
+          <Buttons.OpenButton
+            onClick={() => {
+              setIsHidden(!isHidden);
+            }}
+          />
+        ) : (
+          <Buttons.CloseButton
+            onClick={() => {
+              setIsHidden(!isHidden);
+            }}
+          />
+        )}
       </div>
 
       <div className={`player__content-container ${isHidden ? "player_element-hidden" : ""}`}>
