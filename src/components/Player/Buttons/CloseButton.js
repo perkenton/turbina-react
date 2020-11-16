@@ -1,8 +1,8 @@
 import React from "react";
 
-function SvgCloseButton(props) {
+function SvgCloseButton({ onClick }) {
   return (
-    <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" {...props}>
+    <svg className="player__button player__button_dropout-close" width="1em" height="1em" viewBox="0 0 24 24" fill="none" onClick={onClick}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

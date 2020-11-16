@@ -2,12 +2,7 @@
   height: 24px;
   min-width: 24px;
 
-  background-image: url('../../../../images/player/close-button.svg');
-
-  margin-top: 0;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: 0;
+  margin: 0 0 auto auto;
 
   grid-area: player__button_dropout-close;
 

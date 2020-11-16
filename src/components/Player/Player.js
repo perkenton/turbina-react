@@ -5,8 +5,10 @@ import playlist from "../../constants/playlist";
 import Playlist from "./Playlist";
 import SongText from "./SongText";
 import PlayerTimebar from "./PlayerTimebar";
+import Buttons from "./Buttons/Buttons";
+import classNames from 'classnames';
 
-const Player = ({ toggleRotation, ...props}) => {
+const Player = ({ toggleRotation }) => {
   const [currentSong, setCurrentSong] = useState(playlist[0]);
   const [currentTime, setCurrentTIme] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -29,31 +31,31 @@ const Player = ({ toggleRotation, ...props}) => {
   };
 
   const checkSongStatus = () => {
-    if (isPlaying) {
-      myAudio.current.pause();
-      setIsPlaying(false);
-      toggleRotation(false);
-    } else {
-      myAudio.current.play();
-      setIsPlaying(true);
-      toggleRotation(true);
-    }
+    isPlaying ? myAudio.current.pause() : myAudio.current.play();
+    setIsPlaying(!isPlaying);
+    toggleRotation(!isPlaying);
   };
 
   return (
-    <div className={`player player_extended ${isHidden ? "player_minified" : "player_blur"}`}>
+    <div
+      className={classNames("player player_extended", {
+        player_minified: isHidden,
+        player_blur: !isHidden,
+      })}
+    >
       <div
-        className={`player__album ${isHidden ? "player_element-hidden" : ""}`}
+        className={ classNames('player__album', { "player_element-hidden": isHidden }) }
         style={{ backgroundImage: `url(${currentSong.albumImage})` }}
       />
 
       <div className="player__song-container">
 
-        <button
-          className={`player__button player__button_${isPlaying ? "stop" : "play"}`}
-          onClick={checkSongStatus}
-        />
-
+        {isPlaying ? (
+          <Buttons.StopButton onClick={checkSongStatus} />
+        ) : (
+          <Buttons.PlayButton onClick={checkSongStatus} />
+        )}
+        
         <div className="player__current-song">
           <p className="player__song-title">
             {currentSong.title} — {currentSong.author}
@@ -73,12 +75,10 @@ const Player = ({ toggleRotation, ...props}) => {
 
         <div className="player__buttons-block">
           <a 
-            className={`player__button player__button_clip ${
-              !currentSong.clip ? "player__button-hidden" : ""
-            }`} 
-                href={currentSong.clip} 
-                target="_blank" 
-                rel="noreferrer">
+            className={ classNames('player__button player__button_clip', { "player__button-hidden": !currentSong.clip }) }
+            href={currentSong.clip} 
+            target="_blank" 
+            rel="noreferrer">
           </a>
 
           <button
@@ -91,15 +91,22 @@ const Player = ({ toggleRotation, ...props}) => {
           </button>
         </div>
 
-        <button 
-          className={`player__button player__button_dropout-${isHidden ? "open" : "close"}`}
-          onClick={() => {
-            setIsHidden(!isHidden);
-          }}
-        />
+        {isHidden ? (
+          <Buttons.OpenButton
+            onClick={() => {
+              setIsHidden(!isHidden);
+            }}
+          />
+        ) : (
+          <Buttons.CloseButton
+            onClick={() => {
+              setIsHidden(!isHidden);
+            }}
+          />
+        )}
       </div>
 
-      <div className={`player__content-container ${isHidden ? "player_element-hidden" : ""}`}>
+      <div className={ classNames("player__content-container", { "player_element-hidden" : isHidden }) }>
         {toggleState ? (
           <SongText text={currentSong.songText} />
         ) : (

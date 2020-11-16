@@ -15,10 +15,7 @@
 
   box-sizing: border-box;
 
-  margin-left: auto;
-  margin-top: 0;
-  margin-bottom: auto;
-  margin-right: 0;
+  margin: 0 0 auto auto;
 
   transition: .3s linear;
 }
