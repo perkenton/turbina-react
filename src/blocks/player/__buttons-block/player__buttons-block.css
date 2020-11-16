@@ -1,15 +1,9 @@
 .player__buttons-block {
   display: flex;
 
-  margin-top: -5px;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: 0;
+  margin: -5px 0 auto auto;
 
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 14px;
-  padding-right: 18px;
+  padding: 0 18px 0 14px;
 
   grid-area: player__buttons-block;
 }
@@ -21,9 +15,6 @@
     max-width: 240px;
     width: 100%;
 
-    margin-top: 21px;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 21px auto 0 auto;
   }
 }

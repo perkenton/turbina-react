@@ -14,7 +14,7 @@ const PlayerTimebar = ({ duration, currentTime, onClick }) => {
       <div
         className="player__timebar-progress"
         style={{ width: `${currentTime / duration * 100}%` }}
-      ></div>
+      />
     </div>
   );
 };

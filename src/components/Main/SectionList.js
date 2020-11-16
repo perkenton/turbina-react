@@ -1,10 +1,10 @@
 import React from "react";
 
-function SectionList(props) {
+function SectionList({ list }) {
 
   return (  
     <ul className="section__list">
-      {props.list.map(({ id, text }) => {
+      {list.map(({ id, text }) => {
         return (
           <li className="section__list-item" key={ id } >{ text }</li>
         )

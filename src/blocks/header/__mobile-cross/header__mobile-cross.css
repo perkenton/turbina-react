@@ -7,11 +7,14 @@
   font-size: 25px;
   line-height: 22px;
   color: #fff;
+
   border: 2px solid #fff;
   border-radius: 50%;
+
   margin-top: 0;
   margin-bottom: 0;
   padding: 0px 4px 3px;
+
   transition: .3s ease-in;
   transform: scaleY(0);
 }

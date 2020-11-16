@@ -27,6 +27,5 @@
 @media (max-width: 500px) {
   .header__title {
     width: calc(100% - 48px);
-    /* margin-top: -123px; */
   }
 }

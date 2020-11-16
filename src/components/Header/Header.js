@@ -4,6 +4,7 @@ import MainLogo from './logos/MainLogo';
 import TurbinaLogo from './logos/TurbinaLogo';
 import Player from "../Player/Player";
 import StreamingLink from "../StreamingLink";
+import classnames from "classnames";
 import {
   STREAMING_LINKS,
   MAIN_LOGO,
@@ -57,8 +58,8 @@ function Header() {
       <h1 className="header__title">
         <TurbinaLogo />
       </h1>
-      <div className= { isRotating ? "header__colored-ring header__colored-ring_rotating" : "header__colored-ring" }></div>
-      <div className= { isRotating ? "header__rotation header__rotation_rotating" : "header__rotation" }></div>      
+      <div className= { classnames('header__colored-ring', { 'header__colored-ring_rotating' : isRotating })}></div>
+      <div className= { classnames('header__rotation', { 'header__rotation_rotating': isRotating })}></div>   
 
       <Player toggleRotation = { toggleRotation }/>
     </header>

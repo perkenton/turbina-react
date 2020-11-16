@@ -6,6 +6,7 @@ import Playlist from "./Playlist";
 import SongText from "./SongText";
 import PlayerTimebar from "./PlayerTimebar";
 import Buttons from "./Buttons/Buttons";
+import classNames from 'classnames';
 
 const Player = ({ toggleRotation }) => {
   const [currentSong, setCurrentSong] = useState(playlist[0]);
@@ -30,21 +31,20 @@ const Player = ({ toggleRotation }) => {
   };
 
   const checkSongStatus = () => {
-    if (isPlaying) {
-      myAudio.current.pause();
-      setIsPlaying(false);
-      toggleRotation(false);
-    } else {
-      myAudio.current.play();
-      setIsPlaying(true);
-      toggleRotation(true);
-    }
+    isPlaying ? myAudio.current.pause() : myAudio.current.play();
+    setIsPlaying(!isPlaying);
+    toggleRotation(!isPlaying);
   };
 
   return (
-    <div className={`player player_extended ${isHidden ? "player_minified" : "player_blur"}`}>
+    <div
+      className={classNames("player player_extended", {
+        player_minified: isHidden,
+        player_blur: !isHidden,
+      })}
+    >
       <div
-        className={`player__album ${isHidden ? "player_element-hidden" : ""}`}
+        className={ classNames('player__album', { "player_element-hidden": isHidden }) }
         style={{ backgroundImage: `url(${currentSong.albumImage})` }}
       />
 
@@ -75,12 +75,10 @@ const Player = ({ toggleRotation }) => {
 
         <div className="player__buttons-block">
           <a 
-            className={`player__button player__button_clip ${
-              !currentSong.clip ? "player__button-hidden" : ""
-            }`} 
-                href={currentSong.clip} 
-                target="_blank" 
-                rel="noreferrer">
+            className={ classNames('player__button player__button_clip', { "player__button-hidden": !currentSong.clip }) }
+            href={currentSong.clip} 
+            target="_blank" 
+            rel="noreferrer">
           </a>
 
           <button
@@ -108,7 +106,7 @@ const Player = ({ toggleRotation }) => {
         )}
       </div>
 
-      <div className={`player__content-container ${isHidden ? "player_element-hidden" : ""}`}>
+      <div className={ classNames("player__content-container", { "player_element-hidden" : isHidden }) }>
         {toggleState ? (
           <SongText text={currentSong.songText} />
         ) : (

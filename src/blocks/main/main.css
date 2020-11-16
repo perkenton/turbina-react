@@ -7,10 +7,7 @@
   width: calc(100% - 20px);
 
   box-sizing: border-box;
-  padding-top: 22px;
-  padding-bottom: 48px;
-  padding-left: 53px;
-  padding-right: 53px;
+  padding: 22px 53px 48px 53px;
   margin: 0;
 
   background-color: #ffffff;
@@ -22,18 +19,14 @@
 
 @media (max-width: 1024px) {
   .main {
-    padding-bottom: 40px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 22px 50px 40px 50px;
   }
 }
 
 @media (max-width: 425px) {
   .main {
     width: calc(100% - 10px);
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 22px 20px 20px 20px;
   }
 }
 

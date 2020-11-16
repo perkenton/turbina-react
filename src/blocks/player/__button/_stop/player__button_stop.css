@@ -1,12 +1,7 @@
 .player__button_stop {
   transition: .3s linear;
 
-  margin-top: 4px;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
-
-  grid-area: player__button_play;
+  margin: 4px auto auto auto;
 }
 
 .player__button_stop:hover {
