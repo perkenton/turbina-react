@@ -2,10 +2,7 @@
   background-image: url('../../../../images/player/stop-button.svg');
   transition: .3s linear;
 
-  margin-top: 4px;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 4px auto auto auto;
 }
 
 .player__button_stop:hover {

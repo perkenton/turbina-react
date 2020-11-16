@@ -1,6 +1,5 @@
 .form__input-submit {
   box-sizing: border-box;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +11,7 @@
   border-radius: 30px;
   border: 2px solid #000;
 
-  margin: 60px 0 0;
+  margin: 60px 0 0 0;
 
   background-color: #fff;
 
@@ -49,13 +48,12 @@
     line-height: 20px;
   }
 
-  .form__input-submit:hover {
+  .form__input-submit:hover, .form__input-submit:focus {
     font-size: 14px;
   }
 
   .form__input-submit:focus {
     outline: none;
-    font-size: 14px;
   }
 
   .form__input-submit:active {
